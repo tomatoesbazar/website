@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomatoes Bazar - Fresh Produce, Quality Halal Meat & More</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        .header {
+            background: #ffffff;
+            color: #2c3e50;
+            padding: 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            border-bottom: 3px solid #4FA346;
+        }
+
+        .header .nav-container {
+            padding: 0.1rem 2rem;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0;
+            gap: 1.5rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .logo {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .logo:hover {
+            transform: scale(1.02); 
+        }
+
+        .logo img {
+            height: 70px;
+            width: auto;
+            padding: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .logo img:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: #4FA346;
+            background: rgba(79, 163, 70, 0.1);
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-toggle:hover {
+            background: rgba(79, 163, 70, 0.1);
+            color: #4FA346;
+        }
+
+        /* Mobile menu styles - dropdown */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 200px;
+                background: white;
+                flex-direction: column;
+                padding: 0;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+                border-radius: 8px;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-10px);
+                transition: all 0.3s ease;
+                z-index: 1000;
+                overflow: hidden;
+                list-style: none;
+            }
+
+            .nav-menu.active {
+                display: block;
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+
+            .nav-menu li {
+                list-style: none;
+            }
+
+            .nav-menu a {
+                padding: 1rem 1.5rem;
+                text-align: left;
+                border-bottom: 1px solid #f0f0f0;
+                width: 100%;
+                font-size: 1rem;
+                font-weight: 500;
+                color: #2c3e50;
+                display: block;
+                transition: all 0.2s ease;
+                text-decoration: none;
+            }
+
+            .nav-menu a:last-child {
+                border-bottom: none;
+            }
+
+            .nav-menu a:hover {
+                background: #f8f9fa;
+                color: #4FA346;
+                padding-left: 2rem;
+            }
+
+            .mobile-menu-toggle {
+                z-index: 1001;
+                position: relative;
+                font-size: 1.5rem;
+            }
+
+            .nav-container {
+                justify-content: space-between;
+            }
+        }
+
+        /* Hero Section - Simplified */
+        .hero {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 100px;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero-text-section {
+            flex: 0 0 50%;
+            text-align: left;
+            color: #2c3e50;
+            padding-right: 2rem;
+        }
+
+        .hero-video-section {
+            flex: 0 0 auto;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .hero-logo {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .hero-logo img {
+            height: 200px;
+            width: auto;
+            filter: drop-shadow(0 8px 20px rgba(0,0,0,0.15));
+            transition: all 0.3s ease;
+        }
+
+        .hero-logo img:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 12px 25px rgba(0,0,0,0.2));
+        }
+
+        .hero-video-container {
+            width: 100%;
+            max-width: 500px;
+            height: 350px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            position: relative;
+            margin-left: auto;
+        }
+
+        .hero-video {
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            display: block;
+            object-fit: cover;
+        }
+
+
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #BB2B34, #FF6B35);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            color: #BB2B34;
+            font-weight: 600;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            color: #666;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .cta-primary {
+            background: linear-gradient(45deg, #BB2B34, #e74c3c);
+            color: white;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(187, 43, 52, 0.3);
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(187, 43, 52, 0.4);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: #4FA346;
+            padding: 1rem 2.5rem;
+            border: 2px solid #4FA346;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .cta-secondary:hover {
+            background: #4FA346;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: #f8f9fa;
+            padding: 3rem 0;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+            background: white;
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            min-width: 150px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #4FA346;
+            display: block;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.5rem;
+            font-weight: 500;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+            position: relative;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #BB2B34, #FF6B35);
+            border-radius: 2px;
+        }
+
+        /* About Section */
+        .about {
+            background: #f8f9fa;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.6rem;
+            color: #BB2B34;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        /* About Section Layout */
+        .about-main-content {
+            margin-bottom: 3rem;
+        }
+
+        .about-text-blocks {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .text-block {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #f0f0f0;
+        }
+
+        .text-block:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .text-block h3 {
+            color: #BB2B34;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .text-block p {
+            color: #666;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Tomato Man Images - Side Layout */
+        .content-with-tomato {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .content-text {
+            flex: 1;
+        }
+
+        .tomato-side {
+            flex: 0 0 auto;
+        }
+
+        .tomato-side img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .tomato-side img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Alternating layouts */
+        .tomato-left .content-with-tomato {
+            flex-direction: row;
+        }
+
+        .tomato-right .content-with-tomato {
+            flex-direction: row-reverse;
+        }
+
+        .value-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #f0f0f0;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .value-card i {
+            font-size: 2.5rem;
+            color: #BB2B34;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .value-card:hover i {
+            color: #4FA346;
+            transform: scale(1.1);
+        }
+
+        .value-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        /* Departments Section */
+        .departments {
+            background: white;
+        }
+
+        .departments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .department-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #f0f0f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .department-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #BB2B34, #FF6B35);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .department-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .department-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .department-card i {
+            font-size: 2.5rem;
+            color: #BB2B34;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .department-card:hover i {
+            color: #4FA346;
+            transform: scale(1.1);
+        }
+
+        .department-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .department-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+
+        /* Contact Section */
+        .contact {
+            background: white;
+            color: #2c3e50;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: #BB2B34;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: #4FA346;
+            margin-right: 1rem;
+            width: 30px;
+        }
+
+        .map-container {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .map-container h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+
+        /* Footer */
+        .footer {
+            background: #4FA346;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .social-links {
+            margin: 1rem 0;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #FF6B35;
+        }
+
+        .social-links a[href*="wa.me"]:hover {
+            color: #25D366;
+        }
+
+        /* Floating WhatsApp Button */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            font-size: 28px;
+        }
+
+        .floating-whatsapp:hover {
+            background: #128C7E;
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+        }
+
+        .floating-whatsapp:active {
+            transform: scale(0.95);
+        }
+
+        /* Pulse animation for floating WhatsApp button */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            }
+            50% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.8), 0 0 0 10px rgba(37, 211, 102, 0.1);
+            }
+            100% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            }
+        }
+
+        .floating-whatsapp {
+            animation: pulse 2s infinite;
+        }
+
+        /* Tooltip for floating WhatsApp button */
+        .floating-whatsapp::before {
+            content: "Chat with us on WhatsApp";
+            position: absolute;
+            right: 70px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #333;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1001;
+        }
+
+        .floating-whatsapp::after {
+            content: "";
+            position: absolute;
+            right: 60px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 6px solid transparent;
+            border-left-color: #333;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1001;
+        }
+
+        .floating-whatsapp:hover::before,
+        .floating-whatsapp:hover::after {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .logo img {
+                height: 50px;
+            }
+
+            .header .nav-container {
+                padding: 0.5rem 1rem;
+            }
+
+            .logo {
+                position: static;
+                transform: none;
+            }
+
+            .logo:hover {
+                transform: scale(1.02);
+            }
+
+            /* Mobile header contact bar */
+            .header > div:first-child {
+                padding: 0.3rem 0;
+                font-size: 0.8rem;
+            }
+
+            .header > div:first-child > div {
+                flex-direction: column;
+                gap: 0.2rem;
+                padding: 0 0.5rem;
+                text-align: center;
+            }
+
+            .header > div:first-child > div > div:first-child {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 0.3rem;
+                flex-wrap: wrap;
+            }
+
+            .header > div:first-child > div > div:last-child {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0.3rem;
+            }
+
+            .header > div:first-child span {
+                white-space: nowrap;
+                padding: 0.1rem 0.2rem;
+                font-size: 0.75rem;
+            }
+
+            .header > div:first-child i {
+                font-size: 0.6rem;
+                margin-right: 0.3rem;
+            }
+
+            .hero {
+                padding-top: 200px;
+                min-height: 90vh;
+            }
+
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+                padding: 0 1rem;
+                justify-content: center;
+            }
+
+            .hero-text-section {
+                text-align: center;
+                padding-right: 0;
+            }
+
+            .hero-video-container {
+                margin-left: 0;
+                margin: 0 auto;
+            }
+
+            .hero-title {
+                font-size: 2.2rem;
+                line-height: 1.2;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .hero-description {
+                font-size: 0.95rem;
+                margin-bottom: 2rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                margin-bottom: 2rem;
+            }
+
+            .cta-primary, .cta-secondary {
+                width: 100%;
+                max-width: 250px;
+                text-align: center;
+                padding: 1rem 2rem;
+            }
+
+            .stats-section {
+                padding: 2rem 0;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .stat-item {
+                padding: 1rem 1.5rem;
+                min-width: auto;
+            }
+
+            .hero-logo img {
+                height: 130px;
+            }
+
+            .hero-video-container {
+                max-width: 420px;
+                height: 280px;
+                margin: 0 auto;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .section h2 {
+                font-size: 1.8rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .departments-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-text-blocks {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .text-block {
+                padding: 1.5rem;
+            }
+
+            .content-with-tomato {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .tomato-side img {
+                width: 250px;
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding-top: 180px;
+            }
+
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .hero-logo img {
+                height: 100px;
+            }
+
+            .hero-video-container {
+                max-width: 320px;
+                height: 200px;
+                margin-bottom: 1rem;
+            }
+
+            .stats-section {
+                padding: 1.5rem 0;
+            }
+
+            .hero-stats {
+                gap: 0.8rem;
+            }
+
+
+            .stat-item {
+                padding: 0.8rem 1rem;
+            }
+
+            .tomato-side img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .text-block {
+                padding: 1rem;
+            }
+
+            .about-text-blocks {
+                gap: 1rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .section h2 {
+                font-size: 1.6rem;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animation classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(45deg, #BB2B34, #FF6B35);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <!-- Top Contact Bar -->
+        <div style="background: #4FA346; color: white; padding: 0.5rem 0; text-align: center; font-size: 0.9rem;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <div style="display: flex; align-items: center; gap: 2rem;">
+                    <span><i class="fas fa-phone" style="margin-right: 0.5rem;"></i>(437) 422-5810</span>
+                    <span><i class="fas fa-map-marker-alt" style="margin-right: 0.5rem;"></i>700 Nipissing Rd, Milton</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <span><i class="fas fa-clock" style="margin-right: 0.5rem;"></i>8AM-10PM Daily</span>
+                    <span style="background: #BB2B34; padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: 600; font-size: 0.8rem;">Fresh Daily!</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Navigation -->
+        <nav class="nav-container">
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a href="#" class="logo">
+                <img src="full-logo.png" alt="Tomatoes Bazar Logo">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#departments">Departments</a></li>
+                <li><a href="#offerings">Offerings</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text-section">
+                <div class="hero-logo">
+                    <img src="logo.png" alt="Tomatoes Bazar Logo">
+                </div>
+                <h1 class="hero-title">Freshness. Quality. Family.</h1>
+                <p class="hero-subtitle">Milton's Premier Grocery Experience</p>
+                <p class="hero-description">
+                    Welcome to <strong>Tomatoes Bazar</strong> - where fresh produce, quality halal meat, 
+                    and artisanal baked goods come together in a family-driven marketplace built on 
+                    trust, tradition, and a passion for exceptional food.
+                </p>
+                <div class="hero-cta">
+                    <a href="#departments" class="cta-primary">Explore Us!</a>
+                    <a href="#contact" class="cta-secondary">Visit Store</a>
+                </div>
+            </div>
+            <div class="hero-video-container">
+                <video class="hero-video" autoplay playsinline controls preload="auto">
+                    <source src="tomatoescartoon.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">30+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Halal Certified</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">Fresh</span>
+                    <span class="stat-label">Daily Delivery</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="gradient-text">About Us</h2>
+            <div class="about-content">
+                <div class="about-main-content">
+                    <div class="tomato-left">
+                        <div class="content-with-tomato">
+                            <div class="content-text">
+                                <h3>Our Story</h3>
+                                <p>Tomatoes Bazar is a family business with a big heart. Founded by a father of five with more than 30 years of retail experience across four countries, our vision is simple: bring families together around good food at great prices.</p>
+                                <p>Our logo and brand were created with love — a collective effort of family and friends — reflecting who we are: warm, welcoming, and fresh.</p>
+                            </div>
+                            <div class="tomato-side">
+                                <img src="TomatoMan1.png" alt="Tomato Man Character">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-text-blocks">
+                        <div class="text-block">
+                            <h3>Our Mission</h3>
+                            <p>To provide Milton's families with the freshest produce, quality halal meats, and baked goods, all while creating a new and exciting shopping experience.</p>
+                        </div>
+                        
+                        <div class="text-block">
+                            <h3>Our Vision</h3>
+                            <p>To become the go-to neighborhood supermarket where quality meets affordability and every customer feels at home.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <i class="fas fa-heart"></i>
+                        <h3>Family-Owned</h3>
+                        <p>Built on 30+ years of retail experience with a focus on community, quality, and value.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-leaf"></i>
+                        <h3>Freshness & Quality</h3>
+                        <p>Handpicked produce and quality products that bring healthy meals to your table.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Trust & Honesty</h3>
+                        <p>We believe in building lasting relationships with our community through transparency.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-dollar-sign"></i>
+                        <h3>Affordability</h3>
+                        <p>Making fresh, quality food accessible to every family with unbeatable prices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Departments Section -->
+    <section id="departments" class="section departments">
+        <div class="container">
+            <h2 class="gradient-text">What We Offer</h2>
+            <div class="tomato-right">
+                <div class="content-with-tomato">
+                    <div class="content-text">
+                        <p style="color: #666; font-size: 1.1rem; margin-bottom: 0;">
+                            Discover our wide range of fresh products and services designed to meet all your grocery needs.
+                        </p>
+                    </div>
+                    <div class="tomato-side">
+                        <img src="tomatoman2.png" alt="Tomato Man Character">
+                    </div>
+                </div>
+            </div>
+            <div class="departments-grid">
+                <div class="department-card">
+                    <i class="fas fa-apple-alt"></i>
+                    <h3>Fresh Produce</h3>
+                    <p>Handpicked fruits and vegetables at prices that make healthy living affordable. From seasonal favorites to exotic varieties, we bring you the freshest selection daily.</p>
+                </div>
+                <div class="department-card">
+                    <i class="fas fa-drumstick-bite"></i>
+                    <h3>Halal Meat</h3>
+                    <p>High-quality, fresh, and 100% halal — from everyday staples to specialty cuts. Your trusted source for certified halal meat with quality cuts and fair pricing.</p>
+                </div>
+                <div class="department-card">
+                    <i class="fas fa-bread-slice"></i>
+                    <h3>Bakery</h3>
+                    <p>Freshly baked bread, pastries, and sweets daily to bring warmth to your home. From traditional loaves to artisanal pastries, made fresh every morning.</p>
+                </div>
+                <div class="department-card">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Restaurant</h3>
+                    <p>Enjoy authentic, freshly prepared meals right inside the store. From Middle Eastern flavors to family favorites, every dish is prepared with care and love.</p>
+                </div>
+                <div class="department-card">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>Grocery</h3>
+                    <p>A wide range of Middle Eastern grocery essentials — spices, grains, canned goods, oils, and more. Everything you need for authentic home cooking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store Offerings Section -->
+    <section id="offerings" class="section" style="background: #f8f9fa;">
+        <div class="container">
+            <h2 class="gradient-text">What Makes Us Special</h2>
+            <div class="tomato-left">
+                <div class="content-with-tomato">
+                    <div class="content-text">
+                        <p style="color: #666; font-size: 1.1rem; margin-bottom: 0;">
+                            Experience the difference that comes from 30+ years of serving our community with fresh, quality products and exceptional service.
+                        </p>
+                    </div>
+                    <div class="tomato-side">
+                        <img src="TomatoMan3.png" alt="Tomato Man Character">
+                    </div>
+                </div>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s ease; border: 1px solid #f0f0f0;">
+                    <i class="fas fa-truck" style="font-size: 3rem; color: #BB2B34; margin-bottom: 1.5rem;"></i>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: #2c3e50; font-weight: 600;">Daily Fresh Delivery</h3>
+                    <p style="color: #666; line-height: 1.6;">We receive fresh produce and meat deliveries daily to ensure you always get the freshest products available.</p>
+                    </div>
+                <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s ease; border: 1px solid #f0f0f0;">
+                    <i class="fas fa-certificate" style="font-size: 3rem; color: #BB2B34; margin-bottom: 1.5rem;"></i>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: #2c3e50; font-weight: 600;">100% Halal Certified</h3>
+                    <p style="color: #666; line-height: 1.6;">All our meat products are certified halal, giving you complete confidence in the quality and authenticity of our offerings.</p>
+                    </div>
+                <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s ease; border: 1px solid #f0f0f0;">
+                    <i class="fas fa-users" style="font-size: 3rem; color: #BB2B34; margin-bottom: 1.5rem;"></i>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: #2c3e50; font-weight: 600;">Family-Owned & Operated</h3>
+                    <p style="color: #666; line-height: 1.6;">As a family business, we treat every customer like family and are committed to building lasting relationships in our community.</p>
+                    </div>
+                <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s ease; border: 1px solid #f0f0f0;">
+                    <i class="fas fa-dollar-sign" style="font-size: 3rem; color: #BB2B34; margin-bottom: 1.5rem;"></i>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: #2c3e50; font-weight: 600;">Competitive Pricing</h3>
+                    <p style="color: #666; line-height: 1.6;">We believe quality food should be accessible to everyone, which is why we offer competitive prices without compromising on quality.</p>
+                    </div>
+                <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s ease; border: 1px solid #f0f0f0;">
+                    <i class="fas fa-utensils" style="font-size: 3rem; color: #BB2B34; margin-bottom: 1.5rem;"></i>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: #2c3e50; font-weight: 600;">In-Store Restaurant</h3>
+                    <p style="color: #666; line-height: 1.6;">Take a break from shopping and enjoy freshly prepared meals in our in-store restaurant featuring authentic Middle Eastern cuisine.</p>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s ease; border: 1px solid #f0f0f0;">
+                    <i class="fas fa-clock" style="font-size: 3rem; color: #BB2B34; margin-bottom: 1.5rem;"></i>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: #2c3e50; font-weight: 600;">Extended Hours</h3>
+                    <p style="color: #666; line-height: 1.6;">Open 8AM to 10PM daily, we're here when you need us most, making it convenient for busy families to shop for fresh groceries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="gradient-text">Visit Us Today</h2>
+            <div class="tomato-left">
+                <div class="content-with-tomato">
+                    <div class="content-text">
+                        <p style="color: #666; font-size: 1.1rem; margin-bottom: 0;">
+                            Come visit us at our Milton location and experience the warmth of our family business.
+                        </p>
+                    </div>
+                    <div class="tomato-side">
+                        <img src="TomatoMan4.png" alt="Tomato Man Character">
+                    </div>
+                </div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Address:</strong><br>
+                            Unit 4-5, 700 Nipissing Rd<br>
+                            Milton, ON L9T 4Z9
+                        </div>
+                    </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone:</strong><br>
+                                (437) 422-5810
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <strong>WhatsApp:</strong><br>
+                                <a href="https://wa.me/14374225810" target="_blank" style="color: #4FA346; text-decoration: none;">Chat with us</a>
+                            </div>
+                        </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email:</strong><br>
+                            info@tomatoesbazar.ca
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>Store Hours:</strong><br>
+                            Monday - Sunday: 8:00 AM - 10:00 PM
+                        </div>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <h3>Find Us</h3>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d347.9813608070812!2d-79.86720636187212!3d43.520210433073544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b6f592ab58c1f%3A0x2bcbf6f5e13f7a69!2sTomatoes%20Bazar!5e0!3m2!1sen!2sca!4v1757963976953!5m2!1sen!2sca" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0; border-radius: 8px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Tomatoes Bazar. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/tomatoesbazar/#"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@tomatoesbazar?_t=ZS-8zkws2DEqJ8&_r=1"><i class="fab fa-tiktok"></i></a>
+                <a href="https://wa.me/14374225810" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-snapchat"></i></a>
+            </div>
+            <p>Follow us on social media for weekly specials, community events, and more!</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/14374225810" target="_blank" class="floating-whatsapp" id="floatingWhatsApp" title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for fade-in animation
+        document.querySelectorAll('.section').forEach(section => {
+            section.classList.add('fade-in');
+            observer.observe(section);
+        });
+
+        // Video control with overlay button
+        window.addEventListener('load', () => {
+            const video = document.querySelector('.hero-video');
+            if (!video) return;
+
+            // Ensure single play
+            video.loop = false;
+            video.muted = true; // Start muted for autoplay
+            
+            // Create overlay button with blurred background
+            const videoContainer = document.querySelector('.hero-video-container');
+            
+            // Create blurred background overlay
+            const blurOverlay = document.createElement('div');
+            blurOverlay.style.cssText = `
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0,0,0,0.3);
+                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+                z-index: 5;
+                border-radius: 20px;
+            `;
+            
+            // Create gradient border wrapper
+            const buttonWrapper = document.createElement('div');
+            buttonWrapper.style.cssText = `
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: linear-gradient(135deg, #BB2B34, #FF6B35, #e74c3c);
+                padding: 4px;
+                border-radius: 44px;
+                z-index: 10;
+                box-shadow: 0 10px 30px rgba(187, 43, 52, 0.4);
+            `;
+            
+            const overlayButton = document.createElement('button');
+            overlayButton.innerHTML = '<span style="background: linear-gradient(135deg, #BB2B34, #FF6B35, #e74c3c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 700;">Meet Mr. Tomato!</span><img src="TomatoMan1.png" alt="Tomato Man" style="width: 120px; height: 120px; margin-left: 15px; vertical-align: middle; border-radius: 50%;">';
+            overlayButton.style.cssText = `
+                background: linear-gradient(135deg, #ffffff, #f8f9fa);
+                color: #2c3e50;
+                border: none;
+                padding: 15px 20px;
+                border-radius: 40px;
+                font-size: 20px;
+                font-weight: 600;
+                cursor: pointer;
+                box-shadow: inset 0 2px 4px rgba(255,255,255,0.3), 0 2px 8px rgba(0,0,0,0.1);
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                font-family: 'Inter', sans-serif;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                height: 100%;
+                min-width: 280px;
+                letter-spacing: 0.5px;
+            `;
+
+            // Hover effects
+            buttonWrapper.addEventListener('mouseenter', () => {
+                buttonWrapper.style.transform = 'translate(-50%, -50%) scale(1.08)';
+                buttonWrapper.style.boxShadow = '0 15px 40px rgba(187, 43, 52, 0.6)';
+                overlayButton.style.background = 'linear-gradient(135deg, #ffffff, #ffffff)';
+                overlayButton.style.boxShadow = 'inset 0 2px 4px rgba(255,255,255,0.5), 0 4px 12px rgba(0,0,0,0.15)';
+            });
+
+            buttonWrapper.addEventListener('mouseleave', () => {
+                buttonWrapper.style.transform = 'translate(-50%, -50%) scale(1)';
+                buttonWrapper.style.boxShadow = '0 10px 30px rgba(187, 43, 52, 0.4)';
+                overlayButton.style.background = 'linear-gradient(135deg, #ffffff, #f8f9fa)';
+                overlayButton.style.boxShadow = 'inset 0 2px 4px rgba(255,255,255,0.3), 0 2px 8px rgba(0,0,0,0.1)';
+            });
+
+            // Click handler
+            overlayButton.addEventListener('click', () => {
+                // Remove button wrapper and blur overlay
+                buttonWrapper.remove();
+                blurOverlay.remove();
+                
+                // Play video unmuted
+                video.muted = false;
+                video.volume = 1;
+                video.currentTime = 0;
+                video.play();
+            });
+
+            // Add elements to container
+            videoContainer.style.position = 'relative';
+            videoContainer.appendChild(blurOverlay);
+            buttonWrapper.appendChild(overlayButton);
+            videoContainer.appendChild(buttonWrapper);
+
+            // Keep last frame when video ends
+            video.addEventListener('ended', () => {
+                video.pause();
+            });
+        });
+
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+            if (mobileToggle && navMenu) {
+                mobileToggle.addEventListener('click', function(e) {a
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('Hamburger clicked'); // Debug log
+                    navMenu.classList.toggle('active');
+                });
+
+                // Close mobile menu when clicking on a link
+                document.querySelectorAll('.nav-menu a').forEach(link => {
+                    link.addEventListener('click', function() {
+                        navMenu.classList.remove('active');
+                    });
+                });
+
+                // Close mobile menu when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+                        navMenu.classList.remove('active');
+                    }
+                });
+
+                // Close mobile menu when pressing escape key
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

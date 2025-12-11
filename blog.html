@@ -1027,6 +1027,118 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+
+
+        /* Simple reset */
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;line-height:1.45;color:#222;background:#fafafa}
+
+    /* Page heading */
+    .page-heading{
+      margin-bottom:1.25rem;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+    }
+    .page-heading h1{font-size:1.5rem}
+
+    /* Grid: 3 cols on large, 2 on medium, 1 on small */
+    .posts-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:1rem;
+    }
+
+    /* Responsive breakpoints */
+    @media (max-width: 992px){
+      .posts-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width: 640px){
+      .posts-grid{grid-template-columns:1fr}
+    }
+
+    /* Card */
+    .post-card{
+      background:#fff;
+      border-radius:10px;
+      overflow:hidden;
+      box-shadow:0 6px 18px rgba(20,20,30,0.06);
+      display:flex;
+      flex-direction:column;
+      transition:transform .18s ease, box-shadow .18s ease;
+    }
+    .post-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 12px 28px rgba(20,20,30,0.10);
+    }
+
+    /* Image */
+    .post-thumb{
+      width:100%;
+      aspect-ratio:16/9;
+      object-fit:cover;
+      display:block;
+    }
+
+    /* Card body */
+    .post-body{
+      padding:1rem;
+      display:flex;
+      flex-direction:column;
+      gap:0.6rem;
+      flex:1 1 auto;
+    }
+    .post-meta{
+      font-size:0.8rem;
+      color:#666;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:0.5rem;
+    }
+    .post-title{
+      font-size:1.05rem;
+      font-weight:700;
+      color:#111;
+      text-decoration:none;
+    }
+    .post-excerpt{
+      color:#444;
+      font-size:0.95rem;
+      margin-top:0.25rem;
+      flex:1 1 auto;
+    }
+
+    .post-footer{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:0.5rem;
+      margin-top:0.75rem;
+    }
+    .read-more{
+      background:#4FA346;
+      color:white;
+      padding:0.45rem 0.75rem;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+      font-size:0.9rem;
+    }
+
+    /* Small pill for category/tag */
+    .pill{
+      background:#f3f7f3;
+      color:#3b6b3b;
+      padding:0.25rem 0.5rem;
+      border-radius:999px;
+      font-size:0.78rem;
+      font-weight:600;
+
+
+
+            
         }
     </style>
 </head>
@@ -1065,279 +1177,132 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text-section">
-                <div class="hero-logo">
-                    <img src="logo.png" alt="Tomatoes Bazar Logo">
-                </div>
-                <h1 class="hero-title">Testing</h1>
-                <p class="hero-subtitle">Milton's Premier Grocery Experience</p>
-                <p class="hero-description">
-                    Welcome to <strong>Tomatoes Bazar</strong> - where fresh produce, quality halal meat, 
-                    and artisanal baked goods come together in a family-driven marketplace built on 
-                    trust, tradition, and a passion for exceptional food.
-                </p>
-                <div class="hero-cta">
-                    <a href="#departments" class="cta-primary">Explore Us!</a>
-                    <a href="#contact" class="cta-secondary">Visit Store</a>
-                </div>
-            </div>
-            <div class="hero-video-container">
-                <video class="hero-video" autoplay playsinline controls preload="auto">
-                    <source src="TomatoesCartoon.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-    </section>
+   <main class="container">
+    <div class="page-heading">
+      <h1>Our Blog</h1>
+      <div style="color:#666;font-size:0.93rem">Latest articles & recipes</div>
+    </div>
 
-    <!-- Stats Section -->
-    <section class="stats-section">
-        <div class="container">
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <span class="stat-number">30+</span>
-                    <span class="stat-label">Years Experience</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-label">Halal Certified</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">Fresh</span>
-                    <span class="stat-label">Daily Delivery</span>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="posts-grid">
+      <!-- Post 1 -->
+      <article class="post-card">
+        <img class="post-thumb" src="https://via.placeholder.com/800x450?text=Tomatoes+1" alt="Post image">
+        <div class="post-body">
+          <div class="post-meta">
+            <span class="pill">Produce</span>
+            <span>Dec 5, 2025 • 4 min read</span>
+          </div>
 
-    <!-- About Section -->
-    <section id="about" class="section about">
-        <div class="container">
-            <h2 class="gradient-text">About Us</h2>
-            <div class="about-content">
-                <div class="about-main-content">
-                    <div class="tomato-left">
-                        <div class="content-with-tomato">
-                            <div class="content-text">
-                                <h3>Our Story</h3>
-                                <p>Tomatoes Bazar is a family business with a big heart. Founded by a father of five with more than 30 years of retail experience across four countries, our vision is simple: bring families together around good food at great prices.</p>
-                                <p>Our logo and brand were created with love — a collective effort of family and friends — reflecting who we are: warm, welcoming, and fresh.</p>
-                            </div>
-                            <div class="tomato-side">
-                                <img src="TomatoMan1.png" alt="Tomato Man Character">
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="about-text-blocks">
-                        <div class="text-block">
-                            <h3>Our Mission</h3>
-                            <p>To provide Milton's families with the freshest produce, quality halal meats, and baked goods, all while creating a new and exciting shopping experience.</p>
-                        </div>
-                        
-                        <div class="text-block">
-                            <h3>Our Vision</h3>
-                            <p>To become the go-to neighborhood supermarket where quality meets affordability and every customer feels at home.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="values-grid">
-                    <div class="value-card">
-                        <i class="fas fa-heart"></i>
-                        <h3>Family-Owned</h3>
-                        <p>Built on 30+ years of retail experience with a focus on community, quality, and value.</p>
-                    </div>
-                    <div class="value-card">
-                        <i class="fas fa-leaf"></i>
-                        <h3>Freshness & Quality</h3>
-                        <p>Handpicked produce and quality products that bring healthy meals to your table.</p>
-                    </div>
-                    <div class="value-card">
-                        <i class="fas fa-handshake"></i>
-                        <h3>Trust & Honesty</h3>
-                        <p>We believe in building lasting relationships with our community through transparency.</p>
-                    </div>
-                    <div class="value-card">
-                        <i class="fas fa-dollar-sign"></i>
-                        <h3>Affordability</h3>
-                        <p>Making fresh, quality food accessible to every family with unbeatable prices.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+          <a href="single-post.html" class="post-title">How to choose ripe tomatoes every time</a>
+          <p class="post-excerpt">Learn the simple tests and signs to pick the juiciest, most flavourful tomatoes at market or store.</p>
 
-    <!-- Departments Section -->
-    <section id="departments" class="section departments">
-        <div class="container">
-            <h2 class="gradient-text">What We Offer</h2>
-            <div class="tomato-right">
-                <div class="content-with-tomato">
-                    <div class="content-text">
-                        <p style="color: #666; font-size: 1.1rem; margin-bottom: 0;">
-                            Discover our wide range of fresh products and services designed to meet all your grocery needs.
-                        </p>
-                    </div>
-                    <div class="tomato-side">
-                        <img src="TomatoMan2.png" alt="Tomato Man Char">
-                    </div>
-                </div>
-            </div>
-            <div class="departments-grid">
-                <div class="department-card">
-                    <i class="fas fa-apple-alt"></i>
-                    <h3>Fresh Produce</h3>
-                    <p>Handpicked fruits and vegetables at prices that make healthy living affordable. From seasonal favorites to exotic varieties, we bring you the freshest selection daily.</p>
-                </div>
-                <div class="department-card">
-                    <i class="fas fa-drumstick-bite"></i>
-                    <h3>Halal Meat</h3>
-                    <p>High-quality, fresh, and 100% halal — from everyday staples to specialty cuts. Your trusted source for certified halal meat with quality cuts and fair pricing.</p>
-                </div>
-                <div class="department-card">
-                    <i class="fas fa-bread-slice"></i>
-                    <h3>Bakery</h3>
-                    <p>Freshly baked bread, pastries, and sweets daily to bring warmth to your home. From traditional loaves to artisanal pastries, made fresh every morning.</p>
-                </div>
-                <div class="department-card">
-                    <i class="fas fa-utensils"></i>
-                    <h3>Restaurant</h3>
-                    <p>Enjoy authentic, freshly prepared meals right inside the store. From Middle Eastern flavors to family favorites, every dish is prepared with care and love.</p>
-                </div>
-                <div class="department-card">
-                    <i class="fas fa-shopping-cart"></i>
-                    <h3>Grocery</h3>
-                    <p>A wide range of Middle Eastern grocery essentials — spices, grains, canned goods, oils, and more. Everything you need for authentic home cooking.</p>
-                </div>
-            </div>
+          <div class="post-footer">
+            <div style="color:#777;font-size:0.9rem">By Admin</div>
+            <a class="read-more" href="single-post.html">Read more</a>
+          </div>
         </div>
-    </section>
+      </article>
 
-    <!-- Store Offerings Section -->
-    <section id="offerings" class="section" style="background: #f8f9fa;">
-        <div class="container">
-            <h2 class="gradient-text">What Makes Us Special</h2>
-            <div class="tomato-left">
-                <div class="content-with-tomato">
-                    <div class="content-text">
-                        <p style="color: #666; font-size: 1.1rem; margin-bottom: 0;">
-                            Experience the difference that comes from 30+ years of serving our community with fresh, quality products and exceptional service.
-                        </p>
-                    </div>
-                    <div class="tomato-side">
-                        <img src="TomatoMan3.png" alt="Tomato Man Character">
-                    </div>
-                </div>
-            </div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
-                <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s ease; border: 1px solid #f0f0f0;">
-                    <i class="fas fa-truck" style="font-size: 3rem; color: #BB2B34; margin-bottom: 1.5rem;"></i>
-                    <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: #2c3e50; font-weight: 600;">Daily Fresh Delivery</h3>
-                    <p style="color: #666; line-height: 1.6;">We receive fresh produce and meat deliveries daily to ensure you always get the freshest products available.</p>
-                    </div>
-                <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s ease; border: 1px solid #f0f0f0;">
-                    <i class="fas fa-certificate" style="font-size: 3rem; color: #BB2B34; margin-bottom: 1.5rem;"></i>
-                    <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: #2c3e50; font-weight: 600;">100% Halal Certified</h3>
-                    <p style="color: #666; line-height: 1.6;">All our meat products are certified halal, giving you complete confidence in the quality and authenticity of our offerings.</p>
-                    </div>
-                <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s ease; border: 1px solid #f0f0f0;">
-                    <i class="fas fa-users" style="font-size: 3rem; color: #BB2B34; margin-bottom: 1.5rem;"></i>
-                    <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: #2c3e50; font-weight: 600;">Family-Owned & Operated</h3>
-                    <p style="color: #666; line-height: 1.6;">As a family business, we treat every customer like family and are committed to building lasting relationships in our community.</p>
-                    </div>
-                <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s ease; border: 1px solid #f0f0f0;">
-                    <i class="fas fa-dollar-sign" style="font-size: 3rem; color: #BB2B34; margin-bottom: 1.5rem;"></i>
-                    <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: #2c3e50; font-weight: 600;">Competitive Pricing</h3>
-                    <p style="color: #666; line-height: 1.6;">We believe quality food should be accessible to everyone, which is why we offer competitive prices without compromising on quality.</p>
-                    </div>
-                <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s ease; border: 1px solid #f0f0f0;">
-                    <i class="fas fa-utensils" style="font-size: 3rem; color: #BB2B34; margin-bottom: 1.5rem;"></i>
-                    <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: #2c3e50; font-weight: 600;">In-Store Restaurant</h3>
-                    <p style="color: #666; line-height: 1.6;">Take a break from shopping and enjoy freshly prepared meals in our in-store restaurant featuring authentic Middle Eastern cuisine.</p>
-                </div>
-                <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s ease; border: 1px solid #f0f0f0;">
-                    <i class="fas fa-clock" style="font-size: 3rem; color: #BB2B34; margin-bottom: 1.5rem;"></i>
-                    <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: #2c3e50; font-weight: 600;">Extended Hours</h3>
-                    <p style="color: #666; line-height: 1.6;">Open 8AM to 9PM daily, we're here when you need us most, making it convenient for busy families to shop for fresh groceries.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+      <!-- Post 2 -->
+      <article class="post-card">
+        <img class="post-thumb" src="https://via.placeholder.com/800x450?text=Salad" alt="Post image">
+        <div class="post-body">
+          <div class="post-meta">
+            <span class="pill">Recipes</span>
+            <span>Nov 27, 2025 • 6 min read</span>
+          </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section contact">
-        <div class="container">
-            <h2 class="gradient-text">Visit Us Today</h2>
-            <div class="tomato-left">
-                <div class="content-with-tomato">
-                    <div class="content-text">
-                        <p style="color: #666; font-size: 1.1rem; margin-bottom: 0;">
-                            Come visit us at our Milton location and experience the warmth of our family business.
-                        </p>
-                    </div>
-                    <div class="tomato-side">
-                        <img src="TomatoMan4.png" alt="Tomato Man Character">
-                    </div>
-                </div>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Get In Touch</h3>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <strong>Address:</strong><br>
-                            Unit 4-5, 700 Nipissing Rd<br>
-                            Milton, ON L9T 4Z9
-                        </div>
-                    </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <strong>Phone:</strong><br>
-                                (437) 422-5810
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-whatsapp"></i>
-                            <div>
-                                <strong>WhatsApp:</strong><br>
-                                <a href="https://wa.me/14374225810" target="_blank" style="color: #4FA346; text-decoration: none;">Chat with us</a>
-                            </div>
-                        </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <strong>Email:</strong><br>
-                            info@tomatoesbazar.ca
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <strong>Store Hours:</strong><br>
-                            Monday - Sunday: 8:00 AM - 10:00 PM
-                        </div>
-                    </div>
-                </div>
-                <div class="map-container">
-                    <h3>Find Us</h3>
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d347.9813608070812!2d-79.86720636187212!3d43.520210433073544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b6f592ab58c1f%3A0x2bcbf6f5e13f7a69!2sTomatoes%20Bazar!5e0!3m2!1sen!2sca!4v1757963976953!5m2!1sen!2sca" 
-                        width="100%" 
-                        height="300" 
-                        style="border:0; border-radius: 8px;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-            </div>
+          <a href="single-post.html" class="post-title">Fresh tomato salad with basil & feta</a>
+          <p class="post-excerpt">A quick, healthy salad recipe that highlights seasonal tomatoes — ready in 10 minutes.</p>
+
+          <div class="post-footer">
+            <div style="color:#777;font-size:0.9rem">By Chef Sara</div>
+            <a class="read-more" href="single-post.html">Read more</a>
+          </div>
         </div>
+      </article>
+
+      <!-- Post 3 -->
+      <article class="post-card">
+        <img class="post-thumb" src="https://via.placeholder.com/800x450?text=Market" alt="Post image">
+        <div class="post-body">
+          <div class="post-meta">
+            <span class="pill">Local</span>
+            <span>Oct 12, 2025 • 3 min read</span>
+          </div>
+
+          <a href="single-post.html" class="post-title">Where to find the best local produce in Milton</a>
+          <p class="post-excerpt">An insider guide to the farmers markets and small suppliers near Milton.</p>
+
+          <div class="post-footer">
+            <div style="color:#777;font-size:0.9rem">By Team</div>
+            <a class="read-more" href="single-post.html">Read more</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Duplicate / more posts: copy the article block to add more -->
+      <!-- Post 4 -->
+      <article class="post-card">
+        <img class="post-thumb" src="https://via.placeholder.com/800x450?text=Recipe+2" alt="Post image">
+        <div class="post-body">
+          <div class="post-meta">
+            <span class="pill">Tips</span>
+            <span>Sep 18, 2025 • 5 min read</span>
+          </div>
+
+          <a href="single-post.html" class="post-title">Storing tomatoes the right way</a>
+          <p class="post-excerpt">Keep your tomatoes fresh longer — simple home tricks that actually work.</p>
+
+          <div class="post-footer">
+            <div style="color:#777;font-size:0.9rem">By Admin</div>
+            <a class="read-more" href="single-post.html">Read more</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Post 5 -->
+      <article class="post-card">
+        <img class="post-thumb" src="https://via.placeholder.com/800x450?text=Preserve" alt="Post image">
+        <div class="post-body">
+          <div class="post-meta">
+            <span class="pill">How-to</span>
+            <span>Aug 2, 2025 • 7 min read</span>
+          </div>
+
+          <a href="single-post.html" class="post-title">Make your own tomato chutney</a>
+          <p class="post-excerpt">Step-by-step chutney recipe: sweet, tangy and perfect for sandwiches.</p>
+
+          <div class="post-footer">
+            <div style="color:#777;font-size:0.9rem">By Chef Sara</div>
+            <a class="read-more" href="single-post.html">Read more</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Post 6 -->
+      <article class="post-card">
+        <img class="post-thumb" src="https://via.placeholder.com/800x450?text=Tips+2" alt="Post image">
+        <div class="post-body">
+          <div class="post-meta">
+            <span class="pill">Seasonal</span>
+            <span>Jul 10, 2025 • 4 min read</span>
+          </div>
+
+          <a href="single-post.html" class="post-title">Summer tomato varieties worth trying</a>
+          <p class="post-excerpt">From cherry to heirloom — find out which tomato suits your garden and plate.</p>
+
+          <div class="post-footer">
+            <div style="color:#777;font-size:0.9rem">By Gardener</div>
+            <a class="read-more" href="single-post.html">Read more</a>
+          </div>
+        </div>
+      </article>
+
     </section>
+  </main>
+
+   
 
     <!-- Footer -->
     <footer class="footer">

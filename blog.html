@@ -9,6 +9,8 @@
     <title>Blogs Tomatoes Bazar - Fresh Produce, Quality Halal Meat & More</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <style>
         * {
             margin: 0;
@@ -399,259 +401,7 @@
             border-radius: 2px;
         }
 
-        /* About Section */
-        .about {
-            background: #f8f9fa;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-text h3 {
-            font-size: 1.6rem;
-            color: #BB2B34;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .about-text p {
-            margin-bottom: 1.5rem;
-            color: #666;
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        /* About Section Layout */
-        .about-main-content {
-            margin-bottom: 3rem;
-        }
-
-        .about-text-blocks {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .text-block {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            border: 1px solid #f0f0f0;
-        }
-
-        .text-block:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-
-        .text-block h3 {
-            color: #BB2B34;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .text-block p {
-            color: #666;
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        /* Tomato Man Images - Side Layout */
-        .content-with-tomato {
-            display: flex;
-            align-items: center;
-            gap: 3rem;
-            margin: 3rem 0;
-        }
-
-        .content-text {
-            flex: 1;
-        }
-
-        .tomato-side {
-            flex: 0 0 auto;
-        }
-
-        .tomato-side img {
-            width: 300px;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 20px;
-            transition: all 0.3s ease;
-        }
-
-        .tomato-side img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Alternating layouts */
-        .tomato-left .content-with-tomato {
-            flex-direction: row;
-        }
-
-        .tomato-right .content-with-tomato {
-            flex-direction: row-reverse;
-        }
-
-        .value-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            border: 1px solid #f0f0f0;
-        }
-
-        .value-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-        }
-
-        .value-card i {
-            font-size: 2.5rem;
-            color: #BB2B34;
-            margin-bottom: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .value-card:hover i {
-            color: #4FA346;
-            transform: scale(1.1);
-        }
-
-        .value-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            color: #2c3e50;
-            font-weight: 600;
-        }
-
-        /* Departments Section */
-        .departments {
-            background: white;
-        }
-
-        .departments-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .department-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid #f0f0f0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .department-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #BB2B34, #FF6B35);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .department-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .department-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-        }
-
-        .department-card i {
-            font-size: 2.5rem;
-            color: #BB2B34;
-            margin-bottom: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .department-card:hover i {
-            color: #4FA346;
-            transform: scale(1.1);
-        }
-
-        .department-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: #2c3e50;
-            font-weight: 600;
-        }
-
-        .department-card p {
-            color: #666;
-            line-height: 1.6;
-        }
-
-
-        /* Contact Section */
-        .contact {
-            background: white;
-            color: #2c3e50;
-        }
-
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-        }
-
-        .contact-info h3 {
-            font-size: 1.8rem;
-            margin-bottom: 2rem;
-            color: #BB2B34;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-item i {
-            font-size: 1.5rem;
-            color: #4FA346;
-            margin-right: 1rem;
-            width: 30px;
-        }
-
-        .map-container {
-            background: #f8f9fa;
-            border-radius: 12px;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .map-container h3 {
-            color: #2c3e50;
-            margin-bottom: 1rem;
-        }
+        
 
 
         /* Footer */
@@ -1028,118 +778,37 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
 
+        }   
 
-        /* Simple reset */
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;line-height:1.45;color:#222;background:#fafafa}
+.card-group {
+    gap: 20px;
+    padding-top: 210px;
+    padding-bottom: 60px;
+}
 
-    /* Page heading */
-    .page-heading{
-      margin-bottom:1.25rem;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:1rem;
-    }
-    .page-heading h1{font-size:1.5rem}
 
-    /* Grid: 3 cols on large, 2 on medium, 1 on small */
-    .posts-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:1rem;
-    }
+.card {
+    border: 1px solid #4fa346;
+}
 
-    /* Responsive breakpoints */
-    @media (max-width: 992px){
-      .posts-grid{grid-template-columns:repeat(2,1fr)}
-    }
-    @media (max-width: 640px){
-      .posts-grid{grid-template-columns:1fr}
-    }
 
-    /* Card */
-    .post-card{
-      background:#fff;
-      border-radius:10px;
-      overflow:hidden;
-      box-shadow:0 6px 18px rgba(20,20,30,0.06);
-      display:flex;
-      flex-direction:column;
-      transition:transform .18s ease, box-shadow .18s ease;
-    }
-    .post-card:hover{
-      transform:translateY(-6px);
-      box-shadow:0 12px 28px rgba(20,20,30,0.10);
-    }
+.card {
+    border-left: 1px solid #4fa346 !important;
+}
+    
+.card-group a {
+    background-color: #4fa346;
+    padding: 10px 20px;
+    color: white;
+}
 
-    /* Image */
-    .post-thumb{
-      width:100%;
-      aspect-ratio:16/9;
-      object-fit:cover;
-      display:block;
-    }
-
-    /* Card body */
-    .post-body{
-      padding:1rem;
-      display:flex;
-      flex-direction:column;
-      gap:0.6rem;
-      flex:1 1 auto;
-    }
-    .post-meta{
-      font-size:0.8rem;
-      color:#666;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:0.5rem;
-    }
-    .post-title{
-      font-size:1.05rem;
-      font-weight:700;
-      color:#111;
-      text-decoration:none;
-    }
-    .post-excerpt{
-      color:#444;
-      font-size:0.95rem;
-      margin-top:0.25rem;
-      flex:1 1 auto;
-    }
-
-    .post-footer{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:0.5rem;
-      margin-top:0.75rem;
-    }
-    .read-more{
-      background:#4FA346;
-      color:white;
-      padding:0.45rem 0.75rem;
-      border-radius:8px;
-      text-decoration:none;
-      font-weight:600;
-      font-size:0.9rem;
-    }
-
-    /* Small pill for category/tag */
-    .pill{
-      background:#f3f7f3;
-      color:#3b6b3b;
-      padding:0.25rem 0.5rem;
-      border-radius:999px;
-      font-size:0.78rem;
-      font-weight:600;
-
+p.card-text {
+    margin-bottom: 30px;
+}
 
 
             
-        }
+        
     </style>
 </head>
 <body>
@@ -1176,132 +845,36 @@
             </ul>
         </nav>
     </header>
-
-   <main class="container">
-    <div class="page-heading">
-      <h1>Our Blog</h1>
-      <div style="color:#666;font-size:0.93rem">Latest articles & recipes</div>
+  <div class="container">
+  <div class="card-group">
+    
+  <div class="card">
+    <img class="card-img-top" src="https://cdn10.phillymag.com/wp-content/uploads/sites/3/2015/08/shutterstock_259118531-tomatoes-940.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Why Tomatoes Bazar Is the Go-to Bakery & Grocery Store for Families in Milton</h5>
+      
+      <p class="card-text">For families searching for fresh baked goods in Milton, quality halal groceries, and affordable daily essentials, Tomatoes Bazar has become a trusted household name. With its commitment to freshness, family centered service, and a complete range of food offerings under one roof, Tomatoes Bazar</p>
+       <a href="#">Read More</a>
     </div>
-
-    <section class="posts-grid">
-      <!-- Post 1 -->
-      <article class="post-card">
-        <img class="post-thumb" src="https://enterproductions.ca/wp-content/uploads/2025/11/Professional-photography.webp" alt="Post image">
-        <div class="post-body">
-          <div class="post-meta">
-            <span class="pill">Produce</span>
-            <span>Dec 5, 2025 • 4 min read</span>
-          </div>
-
-          <a href="single-post.html" class="post-title">How to choose ripe tomatoes every time</a>
-          <p class="post-excerpt">Learn the simple tests and signs to pick the juiciest, most flavourful tomatoes at market or store.</p>
-
-          <div class="post-footer">
-            <div style="color:#777;font-size:0.9rem">By Admin</div>
-            <a class="read-more" href="single-post.html">Read more</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Post 2 -->
-      <article class="post-card">
-        <img class="post-thumb" src="https://enterproductions.ca/wp-content/uploads/2025/11/Professional-photography.webp" alt="Post image">
-        <div class="post-body">
-          <div class="post-meta">
-            <span class="pill">Recipes</span>
-            <span>Nov 27, 2025 • 6 min read</span>
-          </div>
-
-          <a href="single-post.html" class="post-title">Fresh tomato salad with basil & feta</a>
-          <p class="post-excerpt">A quick, healthy salad recipe that highlights seasonal tomatoes — ready in 10 minutes.</p>
-
-          <div class="post-footer">
-            <div style="color:#777;font-size:0.9rem">By Chef Sara</div>
-            <a class="read-more" href="single-post.html">Read more</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Post 3 -->
-      <article class="post-card">
-        <img class="post-thumb" src="https://enterproductions.ca/wp-content/uploads/2025/11/Professional-photography.webp" alt="Post image">
-        <div class="post-body">
-          <div class="post-meta">
-            <span class="pill">Local</span>
-            <span>Oct 12, 2025 • 3 min read</span>
-          </div>
-
-          <a href="single-post.html" class="post-title">Where to find the best local produce in Milton</a>
-          <p class="post-excerpt">An insider guide to the farmers markets and small suppliers near Milton.</p>
-
-          <div class="post-footer">
-            <div style="color:#777;font-size:0.9rem">By Team</div>
-            <a class="read-more" href="single-post.html">Read more</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Duplicate / more posts: copy the article block to add more -->
-      <!-- Post 4 -->
-      <article class="post-card">
-        <img class="post-thumb" src="https://enterproductions.ca/wp-content/uploads/2025/11/Professional-photography.webp" alt="Post image">
-        <div class="post-body">
-          <div class="post-meta">
-            <span class="pill">Tips</span>
-            <span>Sep 18, 2025 • 5 min read</span>
-          </div>
-
-          <a href="single-post.html" class="post-title">Storing tomatoes the right way</a>
-          <p class="post-excerpt">Keep your tomatoes fresh longer — simple home tricks that actually work.</p>
-
-          <div class="post-footer">
-            <div style="color:#777;font-size:0.9rem">By Admin</div>
-            <a class="read-more" href="single-post.html">Read more</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Post 5 -->
-      <article class="post-card">
-        <img class="post-thumb" src="https://enterproductions.ca/wp-content/uploads/2025/11/Professional-photography.webp" alt="Post image">
-        <div class="post-body">
-          <div class="post-meta">
-            <span class="pill">How-to</span>
-            <span>Aug 2, 2025 • 7 min read</span>
-          </div>
-
-          <a href="single-post.html" class="post-title">Make your own tomato chutney</a>
-          <p class="post-excerpt">Step-by-step chutney recipe: sweet, tangy and perfect for sandwiches.</p>
-
-          <div class="post-footer">
-            <div style="color:#777;font-size:0.9rem">By Chef Sara</div>
-            <a class="read-more" href="single-post.html">Read more</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Post 6 -->
-      <article class="post-card">
-        <img class="post-thumb" src="https://enterproductions.ca/wp-content/uploads/2025/11/Professional-photography.webp" alt="Post image">
-        <div class="post-body">
-          <div class="post-meta">
-            <span class="pill">Seasonal</span>
-            <span>Jul 10, 2025 • 4 min read</span>
-          </div>
-
-          <a href="single-post.html" class="post-title">Summer tomato varieties worth trying</a>
-          <p class="post-excerpt">From cherry to heirloom — find out which tomato suits your garden and plate.</p>
-
-          <div class="post-footer">
-            <div style="color:#777;font-size:0.9rem">By Gardener</div>
-            <a class="read-more" href="single-post.html">Read more</a>
-          </div>
-        </div>
-      </article>
-
-    </section>
-  </main>
-
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="https://media-cldnry.s-nbcnews.com/image/upload/MSNBC/Components/Video/130731/tdy_giada_food_130731.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Why Milton Residents Trust Tomatoes Bazar for Quality Groceries</h5>
+      <p class="card-text">Finding a dependable place for everyday shopping is important for every household. In Milton, one store that consistently stands out is Tomatoes Bazar, a popular grocery destination known for quality groceries, fresh produce, halal products, and family-friendly prices. Many residents choose Tomatoes Bazar </p>
+      <a href="#">Read More</a>
+    </div>
+  </div>
+  <!-- <div class="card">
+    <img class="card-img-top" src="https://enterproductions.ca/wp-content/uploads/2025/11/Professional-photography.webp" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <a href="#">Read More</a>
+    </div>
+  </div> -->
+</div>
+</div>
    
 
     <!-- Footer -->

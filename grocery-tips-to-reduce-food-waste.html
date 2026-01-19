@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 Ways to Save Money on Groceries and Reduce Food Waste</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        .header {
+            background: #ffffff;
+            color: #2c3e50;
+            padding: 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            border-bottom: 3px solid #4FA346;
+        }
+
+        .header .nav-container {
+            padding: 0.1rem 2rem;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0;
+            gap: 1.5rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .logo {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .logo:hover {
+            transform: scale(1.02); 
+        }
+
+        .logo img {
+            height: 70px;
+            width: auto;
+            padding: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .logo img:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: #4FA346;
+            background: rgba(79, 163, 70, 0.1);
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c3e50;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-toggle:hover {
+            background: rgba(79, 163, 70, 0.1);
+            color: #4FA346;
+        }
+
+        /* Mobile menu styles - dropdown */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 200px;
+                background: white;
+                flex-direction: column;
+                padding: 0;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+                border-radius: 8px;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-10px);
+                transition: all 0.3s ease;
+                z-index: 1000;
+                overflow: hidden;
+                list-style: none;
+            }
+
+            .nav-menu.active {
+                display: block;
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+
+            .nav-menu li {
+                list-style: none;
+            }
+
+            .nav-menu a {
+                padding: 1rem 1.5rem;
+                text-align: left;
+                border-bottom: 1px solid #f0f0f0;
+                width: 100%;
+                font-size: 1rem;
+                font-weight: 500;
+                color: #2c3e50;
+                display: block;
+                transition: all 0.2s ease;
+                text-decoration: none;
+            }
+
+            .nav-menu a:last-child {
+                border-bottom: none;
+            }
+
+            .nav-menu a:hover {
+                background: #f8f9fa;
+                color: #4FA346;
+                padding-left: 2rem;
+            }
+
+            .mobile-menu-toggle {
+                z-index: 1001;
+                position: relative;
+                font-size: 1.5rem;
+            }
+
+            .nav-container {
+                justify-content: space-between;
+            }
+        }
+
+        /* Hero Section - Simplified */
+        .hero {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 100px;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero-text-section {
+            flex: 0 0 50%;
+            text-align: left;
+            color: #2c3e50;
+            padding-right: 2rem;
+        }
+
+        .hero-video-section {
+            flex: 0 0 auto;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .hero-logo {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .hero-logo img {
+            height: 200px;
+            width: auto;
+            filter: drop-shadow(0 8px 20px rgba(0,0,0,0.15));
+            transition: all 0.3s ease;
+        }
+
+        .hero-logo img:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 12px 25px rgba(0,0,0,0.2));
+        }
+
+        .hero-video-container {
+            width: 100%;
+            max-width: 500px;
+            height: 350px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            position: relative;
+            margin-left: auto;
+        }
+
+        .hero-video {
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            display: block;
+            object-fit: cover;
+        }
+
+
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #BB2B34, #FF6B35);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            color: #BB2B34;
+            font-weight: 600;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            color: #666;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .cta-primary {
+            background: linear-gradient(45deg, #BB2B34, #e74c3c);
+            color: white;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(187, 43, 52, 0.3);
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(187, 43, 52, 0.4);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: #4FA346;
+            padding: 1rem 2.5rem;
+            border: 2px solid #4FA346;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .cta-secondary:hover {
+            background: #4FA346;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: #f8f9fa;
+            padding: 3rem 0;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+            background: white;
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            min-width: 150px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #4FA346;
+            display: block;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.5rem;
+            font-weight: 500;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+            position: relative;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #BB2B34, #FF6B35);
+            border-radius: 2px;
+        }
+
+        
+
+
+        /* Footer */
+        .footer {
+            background: #4FA346;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .social-links {
+            margin: 1rem 0;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #FF6B35;
+        }
+
+        .social-links a[href*="wa.me"]:hover {
+            color: #25D366;
+        }
+
+        /* Floating WhatsApp Button */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            font-size: 28px;
+        }
+
+        .floating-whatsapp:hover {
+            background: #128C7E;
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+        }
+
+        .floating-whatsapp:active {
+            transform: scale(0.95);
+        }
+
+        /* Pulse animation for floating WhatsApp button */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            }
+            50% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.8), 0 0 0 10px rgba(37, 211, 102, 0.1);
+            }
+            100% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            }
+        }
+
+        .floating-whatsapp {
+            animation: pulse 2s infinite;
+        }
+
+        /* Tooltip for floating WhatsApp button */
+        .floating-whatsapp::before {
+            content: "Chat with us on WhatsApp";
+            position: absolute;
+            right: 70px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #333;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1001;
+        }
+
+        .floating-whatsapp::after {
+            content: "";
+            position: absolute;
+            right: 60px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 6px solid transparent;
+            border-left-color: #333;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1001;
+        }
+
+        .floating-whatsapp:hover::before,
+        .floating-whatsapp:hover::after {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .logo img {
+                height: 50px;
+            }
+
+            .header .nav-container {
+                padding: 0.5rem 1rem;
+            }
+
+            .logo {
+                position: static;
+                transform: none;
+            }
+
+            .logo:hover {
+                transform: scale(1.02);
+            }
+
+            /* Mobile header contact bar */
+            .header > div:first-child {
+                padding: 0.3rem 0;
+                font-size: 0.8rem;
+            }
+
+            .header > div:first-child > div {
+                flex-direction: column;
+                gap: 0.2rem;
+                padding: 0 0.5rem;
+                text-align: center;
+            }
+
+            .header > div:first-child > div > div:first-child {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 0.3rem;
+                flex-wrap: wrap;
+            }
+
+            .header > div:first-child > div > div:last-child {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0.3rem;
+            }
+
+            .header > div:first-child span {
+                white-space: nowrap;
+                padding: 0.1rem 0.2rem;
+                font-size: 0.75rem;
+            }
+
+            .header > div:first-child i {
+                font-size: 0.6rem;
+                margin-right: 0.3rem;
+            }
+
+            .hero {
+                padding-top: 200px;
+                min-height: 90vh;
+            }
+
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+                padding: 0 1rem;
+                justify-content: center;
+            }
+
+            .hero-text-section {
+                text-align: center;
+                padding-right: 0;
+            }
+
+            .hero-video-container {
+                margin-left: 0;
+                margin: 0 auto;
+            }
+
+            .hero-title {
+                font-size: 2.2rem;
+                line-height: 1.2;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .hero-description {
+                font-size: 0.95rem;
+                margin-bottom: 2rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                margin-bottom: 2rem;
+            }
+
+            .cta-primary, .cta-secondary {
+                width: 100%;
+                max-width: 250px;
+                text-align: center;
+                padding: 1rem 2rem;
+            }
+
+            .stats-section {
+                padding: 2rem 0;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .stat-item {
+                padding: 1rem 1.5rem;
+                min-width: auto;
+            }
+
+            .hero-logo img {
+                height: 130px;
+            }
+
+            .hero-video-container {
+                max-width: 420px;
+                height: 280px;
+                margin: 0 auto;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .section h2 {
+                font-size: 1.8rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .departments-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-text-blocks {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .text-block {
+                padding: 1.5rem;
+            }
+
+            .content-with-tomato {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .tomato-side img {
+                width: 250px;
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding-top: 180px;
+            }
+
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .hero-logo img {
+                height: 100px;
+            }
+
+            .hero-video-container {
+                max-width: 320px;
+                height: 200px;
+                margin-bottom: 1rem;
+            }
+
+            .stats-section {
+                padding: 1.5rem 0;
+            }
+
+            .hero-stats {
+                gap: 0.8rem;
+            }
+
+
+            .stat-item {
+                padding: 0.8rem 1rem;
+            }
+
+            .tomato-side img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .text-block {
+                padding: 1rem;
+            }
+
+            .about-text-blocks {
+                gap: 1rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .section h2 {
+                font-size: 1.6rem;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animation classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(45deg, #BB2B34, #FF6B35);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+
+        }   
+
+.single_blog {
+    padding-top: 210px !important;
+    padding-bottom: 60px !important;
+}
+
+
+h5.card-title {
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.card{
+    border: none !important;
+}
+
+
+.card-body {
+    border: 1px solid #4fa346;
+}
+
+
+   
+.card-group a {
+    background-color: #4fa346;
+    padding: 10px 20px;
+    color: white;
+}
+
+p.card-text {
+    margin-bottom: 30px;
+}
+
+
+            
+        
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <!-- Top Contact Bar -->
+        <div style="background: #4FA346; color: white; padding: 0.5rem 0; text-align: center; font-size: 0.9rem;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <div style="display: flex; align-items: center; gap: 2rem;">
+                    <span><i class="fas fa-phone" style="margin-right: 0.5rem;"></i>(437) 422-5810</span>
+                    <span><i class="fas fa-map-marker-alt" style="margin-right: 0.5rem;"></i>700 Nipissing Rd, Milton</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <span><i class="fas fa-clock" style="margin-right: 0.5rem;"></i>8AM-9PM Daily</span>
+                    <span style="background: #BB2B34; padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: 600; font-size: 0.8rem;">Fresh Daily!</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Navigation -->
+        <nav class="nav-container">
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a href="https://tomatoesbazar.ca" class="logo">
+                <img src="full-logo.png" alt="Tomatoes Bazar Logo">
+            </a>
+             <ul class="nav-menu">
+                <li><a href="https://tomatoesbazar.ca/">Home</a></li>
+                <li><a href="https://tomatoesbazar.ca/#about">About</a></li>
+                <li><a href="https://tomatoesbazar.ca/#departments">Departments</a></li>
+                <li><a href="https://tomatoesbazar.ca/#offerings">Offerings</a></li>
+                <li><a href="https://tomatoesbazar.ca/blog">Blogs</a></li>
+
+                <li><a href="https://tomatoesbazar.ca/#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="single_blog">
+  <div class="container">
+  <div class="card" style="width: 100%;">
+    <h5 class="card-title">10 Ways to Save Money on Groceries and Reduce Food Waste</h5>
+  <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB1nCPFm.img?w=1920&h=1080&m=4&q=75" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p><span style="font-weight: 400;">Saving money on </span><a href="https://tomatoesbazar.ca/"><strong>food groceries </strong></a><span style="font-weight: 400;">while reducing food waste is possible with smart planning, strategic shopping, and proper food storage. Simple practices like meal planning, creating shopping lists, buying in bulk, storing food properly, and using leftovers effectively can cut costs and prevent unnecessary waste. These strategies not only save your wallet but also help the environment by reducing discarded food.</span></p>
+<p><span style="font-weight: 400;">In this guide, we&rsquo;ll share </span><strong>10 practical and easy-to-follow ways</strong><span style="font-weight: 400;"> to help you save money, reduce food waste, and make your </span><a href="https://tomatoesbazar.ca/"><strong>grocery shopping</strong></a><span style="font-weight: 400;"> more efficient and sustainable.</span></p>
+<h2><strong>1. Plan Your Meals Ahead of Time</strong></h2>
+<p><span style="font-weight: 400;">Meal planning is the first step to saving money on groceries. By planning weekly meals, you can buy exactly what you need, avoid impulse purchases, and ensure all ingredients are used efficiently.</span></p>
+<p><span style="font-weight: 400;">Write down breakfast, lunch, dinner, and snacks, then create a shopping list based on this plan. Meal planning helps prevent food spoilage, reduces waste, and ensures that your grocery budget is used wisely. Over time, it also makes cooking less stressful, as you know exactly what to prepare each day.</span></p>
+<h2><strong>2. Make a Detailed Shopping List</strong></h2>
+<p><span style="font-weight: 400;">A shopping list keeps you focused and prevents unnecessary purchases. Check your pantry and fridge before heading out to see what items you already have.</span></p>
+<p><span style="font-weight: 400;">Organize your list by categories such as vegetables, fruits, grains, dairy, and proteins. Sticking to the list minimizes overspending and reduces the chances of buying items that may go unused and spoil. Having a clear list also makes your shopping trips faster and more efficient.</span></p>
+<h2><strong>3. Buy in Bulk When It Makes Sense</strong></h2>
+<p><span style="font-weight: 400;">Purchasing staple items like rice, pasta, beans, or frozen vegetables in bulk can save money. Bulk buying reduces packaging waste and often costs less per unit.</span></p>
+<p><span style="font-weight: 400;">Be careful to only buy what you can realistically use before the product expires. Pair bulk buying with proper storage techniques to maximize shelf life and reduce waste. Buying bulk for long-lasting items also frees up time, as you don&rsquo;t need to shop as frequently.</span></p>
+<h2><strong>4. Store Food Properly</strong></h2>
+<p><span style="font-weight: 400;">Proper food storage is essential for reducing waste. Keep fruits and vegetables in the correct section of the fridge, use airtight containers for leftovers, and freeze perishable items you won&rsquo;t use immediately.</span></p>
+<p><span style="font-weight: 400;">Label containers with dates to track freshness. Well-stored food lasts longer, helping you save money and avoid throwing away spoiled items. Knowing how to store each type of produce correctly also keeps flavors and nutrients intact for healthier meals.</span></p>
+<h2><strong>5. Use Leftovers Creatively</strong></h2>
+<p><span style="font-weight: 400;">Leftovers can be transformed into new meals, snacks, or ingredients for other recipes. For example, leftover roasted vegetables can be turned into soups or stir-fries, and extra rice can be used for fried rice or casseroles.</span></p>
+<p><span style="font-weight: 400;">Using leftovers creatively ensures no food goes to waste and stretches your grocery budget further. It can also inspire new recipes and add variety to your weekly meals without extra cost.</span></p>
+<h2><strong>6. Shop Seasonal and Local Produce</strong></h2>
+<p><span style="font-weight: 400;">Seasonal and locally sourced fruits and vegetables are often fresher, tastier, and more affordable. Buying in-season produce also reduces transportation costs, which can impact prices.</span></p>
+<p><span style="font-weight: 400;">Local farmers&rsquo; markets or stores like </span><strong>Tomatoes Bazar</strong><span style="font-weight: 400;"> offer seasonal vegetables, fruits, and pantry staples that support sustainable consumption while keeping costs down. Seasonal shopping also introduces you to new produce, making meals more exciting and nutritious.</span></p>
+<h2><strong>7. Compare Prices and Take Advantage of Discounts</strong></h2>
+<p><span style="font-weight: 400;">Compare prices between brands, stores, and online grocery platforms. Many stores offer weekly promotions or discounts on staple items.</span></p>
+<p><span style="font-weight: 400;">Look for multi-buy deals and coupons but avoid purchasing more than you need. Smart shopping habits reduce unnecessary spending and prevent food from going unused. Keeping an eye on seasonal promotions and loyalty programs can further maximize your savings.</span></p>
+<h2><strong>8. Avoid Shopping When Hungry</strong></h2>
+<p><span style="font-weight: 400;">Shopping on an empty stomach can lead to impulse purchases of snacks and convenience foods. These items often go unused or spoil, leading to food waste.</span></p>
+<p><span style="font-weight: 400;">Eat before grocery shopping and stick to your list. This simple habit saves money and reduces the risk of buying non-essential items that won&rsquo;t be consumed. It also makes it easier to focus on buying fresh, healthy ingredients for your planned meals.</span></p>
+<h2><strong>9. Practice Portion Control</strong></h2>
+<p><span style="font-weight: 400;">Cooking the right portion sizes prevents leftover waste. Measure ingredients before cooking, store extras properly, and serve manageable amounts.</span></p>
+<p><span style="font-weight: 400;">Overcooking often leads to throwing away food, which wastes both money and resources. Proper portioning ensures you eat what you buy and maintain efficiency in the kitchen. Portion control can also help reduce overeating and support healthier eating habits.</span></p>
+<h2><strong>10. Repurpose Food Scraps</strong></h2>
+<p><span style="font-weight: 400;">Food scraps like vegetable peels, stems, and meat bones can be repurposed into stocks, soups, or compost. This reduces kitchen waste and extends the value of every ingredient you purchase.</span></p>
+<p><span style="font-weight: 400;">Composting organic scraps also benefits the environment, creating a sustainable cycle that turns potential waste into usable resources for gardening or household use. Repurposing scraps can also save money by replacing store-bought stocks or broth in recipes.</span></p>
+<h2><strong>Conclusion</strong></h2>
+<p><span style="font-weight: 400;">Saving money on groceries and reducing food waste is all about planning, smart shopping, and creative use of ingredients. By meal planning, making detailed shopping lists, buying in bulk, storing food properly, and repurposing leftovers, you can stretch your grocery budget and minimize waste. Shopping seasonal produce, comparing prices, practicing portion control, and repurposing food scraps further ensures efficiency, freshness, and sustainability in your kitchen.</span></p>
+<p><span style="font-weight: 400;">At </span><a href="https://tomatoesbazar.ca/"><strong>Tomatoes Bazar</strong></a><span style="font-weight: 400;">, we offer fresh, high-quality vegetables, fruits, and pantry staples to help you plan meals, cook efficiently, and save money. Explore our wide selection online and </span><a href="https://tomatoesbazar.ca/"><strong>order today</strong></a><span style="font-weight: 400;"> to get fresh ingredients delivered to your door. Make every meal count, reduce waste, and enjoy smarter grocery shopping with </span><strong>Tomatoes Bazar</strong><span style="font-weight: 400;">!</span></p>
+<h2><strong>FAQs</strong></h2>
+<ol>
+<li><strong> How can I save money on groceries in Canada?</strong></li>
+</ol>
+<p><span style="font-weight: 400;">You can save money on groceries by meal planning, making a detailed shopping list, buying in bulk, using coupons or discounts, and avoiding impulse purchases. Shopping for seasonal produce and comparing prices also reduces costs.</span></p>
+<ol start="2">
+<li><strong> What are the best ways to reduce food waste at home?</strong></li>
+</ol>
+<p><span style="font-weight: 400;">Reducing food waste involves proper storage of fruits and vegetables, repurposing leftovers, portion control, and composting scraps. Meal planning and labeling food with dates also help prevent spoilage.</span></p>
+<ol start="3">
+<li><strong> Can shopping at local markets save money and reduce waste?</strong></li>
+</ol>
+<p><span style="font-weight: 400;">Yes, local markets often offer fresh, seasonal produce at lower prices. Buying seasonal items supports sustainable consumption and reduces food waste by ensuring you use produce at its peak freshness.</span></p>
+<ol start="4">
+<li><strong> How does meal planning help with grocery savings?</strong></li>
+</ol>
+<p><span style="font-weight: 400;">Meal planning ensures you buy only what you need, reducing unnecessary purchases and food waste. It also saves time, helps you stick to a budget, and allows better use of leftovers in future meals.</span></p>
+<ol start="5">
+<li><strong> Which grocery items are best to buy in bulk?</strong></li>
+</ol>
+<p><span style="font-weight: 400;">Staples such as rice, pasta, beans, flour, and frozen vegetables are ideal for bulk buying. Purchasing in bulk lowers the cost per unit, reduces packaging waste, and ensures you always have essentials on hand.</span></p>
+<ol start="6">
+<li><strong> How can I store fruits and vegetables to last longer?</strong></li>
+</ol>
+<p><span style="font-weight: 400;">Store produce in proper fridge compartments or airtight containers to maintain freshness. Label items with dates and separate ethylene-producing fruits like bananas from vegetables to extend shelf life and reduce spoilage.</span></p>
+<ol start="7">
+<li><strong> Are leftovers useful for saving money and reducing waste?</strong></li>
+</ol>
+<p><span style="font-weight: 400;">Yes, leftovers can be repurposed into soups, stir-fries, casseroles, or snacks. Using leftovers creatively prevents food from going to waste while stretching your grocery budget.</span></p>
+<ol start="8">
+<li><strong> Where can I buy fresh, high-quality produce in Canada?</strong></li>
+</ol>
+<p><strong>Tomatoes Bazar</strong><span style="font-weight: 400;"> provides fresh vegetables, fruits, and pantry staples delivered across Canada. With quality-checked, seasonal, and sustainably sourced produce, you can save money, reduce food waste, and cook delicious meals confidently.</span></p>
+    
+  </div>
+</div>
+</div>
+</div>
+   
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Tomatoes Bazar. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/tomatoesbazar/#"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@tomatoes.bazar?_t=ZS-8zkws2DEqJ8&_r=1"><i class="fab fa-tiktok"></i></a>
+                <a href="https://wa.me/14374225810" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-snapchat"></i></a>
+            </div>
+            <p>Follow us on social media for weekly specials, community events, and more!</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/14374225810" target="_blank" class="floating-whatsapp" id="floatingWhatsApp" title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for fade-in animation
+        document.querySelectorAll('.section').forEach(section => {
+            section.classList.add('fade-in');
+            observer.observe(section);
+        });
+
+        // Video control with overlay button
+        window.addEventListener('load', () => {
+            const video = document.querySelector('.hero-video');
+            if (!video) return;
+
+            // Ensure single play
+            video.loop = false;
+            video.muted = true; // Start muted for autoplay
+            
+            // Create overlay button with blurred background
+            const videoContainer = document.querySelector('.hero-video-container');
+            
+            // Create blurred background overlay
+            const blurOverlay = document.createElement('div');
+            blurOverlay.style.cssText = `
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0,0,0,0.3);
+                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+                z-index: 5;
+                border-radius: 20px;
+            `;
+            
+            // Create gradient border wrapper
+            const buttonWrapper = document.createElement('div');
+            buttonWrapper.style.cssText = `
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: linear-gradient(135deg, #BB2B34, #FF6B35, #e74c3c);
+                padding: 4px;
+                border-radius: 44px;
+                z-index: 10;
+                box-shadow: 0 10px 30px rgba(187, 43, 52, 0.4);
+            `;
+            
+            const overlayButton = document.createElement('button');
+            overlayButton.innerHTML = '<span style="background: linear-gradient(135deg, #BB2B34, #FF6B35, #e74c3c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 700;">Meet Mr. Tomato!</span><img src="TomatoMan1.png" alt="Tomato Man" style="width: 120px; height: 120px; margin-left: 15px; vertical-align: middle; border-radius: 50%;">';
+            overlayButton.style.cssText = `
+                background: linear-gradient(135deg, #ffffff, #f8f9fa);
+                color: #2c3e50;
+                border: none;
+                padding: 15px 20px;
+                border-radius: 40px;
+                font-size: 20px;
+                font-weight: 600;
+                cursor: pointer;
+                box-shadow: inset 0 2px 4px rgba(255,255,255,0.3), 0 2px 8px rgba(0,0,0,0.1);
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                font-family: 'Inter', sans-serif;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                height: 100%;
+                min-width: 280px;
+                letter-spacing: 0.5px;
+            `;
+
+            // Hover effects
+            buttonWrapper.addEventListener('mouseenter', () => {
+                buttonWrapper.style.transform = 'translate(-50%, -50%) scale(1.08)';
+                buttonWrapper.style.boxShadow = '0 15px 40px rgba(187, 43, 52, 0.6)';
+                overlayButton.style.background = 'linear-gradient(135deg, #ffffff, #ffffff)';
+                overlayButton.style.boxShadow = 'inset 0 2px 4px rgba(255,255,255,0.5), 0 4px 12px rgba(0,0,0,0.15)';
+            });
+
+            buttonWrapper.addEventListener('mouseleave', () => {
+                buttonWrapper.style.transform = 'translate(-50%, -50%) scale(1)';
+                buttonWrapper.style.boxShadow = '0 10px 30px rgba(187, 43, 52, 0.4)';
+                overlayButton.style.background = 'linear-gradient(135deg, #ffffff, #f8f9fa)';
+                overlayButton.style.boxShadow = 'inset 0 2px 4px rgba(255,255,255,0.3), 0 2px 8px rgba(0,0,0,0.1)';
+            });
+
+            // Click handler
+            overlayButton.addEventListener('click', () => {
+                // Remove button wrapper and blur overlay
+                buttonWrapper.remove();
+                blurOverlay.remove();
+                
+                // Play video unmuted
+                video.muted = false;
+                video.volume = 1;
+                video.currentTime = 0;
+                video.play();
+            });
+
+            // Add elements to container
+            videoContainer.style.position = 'relative';
+            videoContainer.appendChild(blurOverlay);
+            buttonWrapper.appendChild(overlayButton);
+            videoContainer.appendChild(buttonWrapper);
+
+            // Keep last frame when video ends
+            video.addEventListener('ended', () => {
+                video.pause();
+            });
+        });
+
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+            if (mobileToggle && navMenu) {
+                mobileToggle.addEventListener('click', function(e) {a
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('Hamburger clicked'); // Debug log
+                    navMenu.classList.toggle('active');
+                });
+
+                // Close mobile menu when clicking on a link
+                document.querySelectorAll('.nav-menu a').forEach(link => {
+                    link.addEventListener('click', function() {
+                        navMenu.classList.remove('active');
+                    });
+                });
+
+                // Close mobile menu when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+                        navMenu.classList.remove('active');
+                    }
+                });
+
+                // Close mobile menu when pressing escape key
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

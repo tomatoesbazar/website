@@ -829,7 +829,7 @@ p.card-text {
                     <span><i class="fas fa-map-marker-alt" style="margin-right: 0.5rem;"></i>700 Nipissing Rd, Milton</span>
                 </div>
                 <div style="display: flex; align-items: center; gap: 1rem;">
-                    <span><i class="fas fa-clock" style="margin-right: 0.5rem;"></i>8AM-9PM Daily</span>
+                    <span><i class="fas fa-clock" style="margin-right: 0.5rem;"></i>8AM-10PM Daily</span>
                     <span style="background: #BB2B34; padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: 600; font-size: 0.8rem;">Fresh Daily!</span>
                 </div>
             </div>

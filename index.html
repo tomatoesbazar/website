@@ -3,1334 +3,508 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tomatoes Bazar - Fresh Produce, Quality Halal Meat & More</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Tomatoes Bazar | Fresh Halal Groceries &amp; Meat — Milton, ON</title>
+    <meta name="description" content="Tomatoes Bazar is Milton's neighbourhood grocery store with certified halal meat, fresh produce, Middle Eastern groceries, a bakery, and an in-store restaurant. Open daily 8AM–10PM at 700 Nipissing Rd.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://tomatoesbazar.ca/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Tomatoes Bazar">
+    <meta property="og:title" content="Tomatoes Bazar | Fresh Halal Groceries &amp; Meat — Milton, ON">
+    <meta property="og:description" content="Milton's neighbourhood grocery: certified halal meat, fresh produce, Middle Eastern essentials, bakery, and restaurant. Open daily 8AM–10PM.">
+    <meta property="og:url" content="https://tomatoesbazar.ca/">
+    <meta property="og:image" content="https://tomatoesbazar.ca/Gallery/574221882_17855656395557410_849179397032553801_n.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tomatoes Bazar | Fresh Halal Groceries &amp; Meat — Milton, ON">
+    <meta name="twitter:description" content="Milton's neighbourhood grocery: certified halal meat, fresh produce, Middle Eastern essentials, bakery, and restaurant.">
+    <meta name="twitter:image" content="https://tomatoesbazar.ca/Gallery/574221882_17855656395557410_849179397032553801_n.jpg">
+    <link rel="icon" type="image/png" href="full-logo.png">
+    <link rel="apple-touch-icon" href="full-logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            overflow-x: hidden;
-        }
-
-        /* Header & Navigation */
-        .header {
-            background: #ffffff;
-            color: #2c3e50;
-            padding: 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
-            border-bottom: 3px solid #4FA346;
-        }
-
-        .header .nav-container {
-            padding: 0.1rem 2rem;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0;
-            gap: 1.5rem;
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .logo {
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            transition: transform 0.3s ease;
-            flex-shrink: 0;
-        }
-
-        .logo:hover {
-            transform: scale(1.02); 
-        }
-
-        .logo img {
-            height: 70px;
-            width: auto;
-            padding: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .logo img:hover {
-            transform: scale(1.05);
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-menu a {
-            color: #2c3e50;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1rem;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .nav-menu a:hover {
-            color: #4FA346;
-            background: rgba(79, 163, 70, 0.1);
-        }
-
-        .mobile-menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: #2c3e50;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 0.5rem;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-
-        .mobile-menu-toggle:hover {
-            background: rgba(79, 163, 70, 0.1);
-            color: #4FA346;
-        }
-
-        /* Mobile menu styles - dropdown */
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 200px;
-                background: white;
-                flex-direction: column;
-                padding: 0;
-                box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-                border-radius: 8px;
-                opacity: 0;
-                visibility: hidden;
-                transform: translateY(-10px);
-                transition: all 0.3s ease;
-                z-index: 1000;
-                overflow: hidden;
-                list-style: none;
-            }
-
-            .nav-menu.active {
-                display: block;
-                opacity: 1;
-                visibility: visible;
-                transform: translateY(0);
-            }
-
-            .nav-menu li {
-                list-style: none;
-            }
-
-            .nav-menu a {
-                padding: 1rem 1.5rem;
-                text-align: left;
-                border-bottom: 1px solid #f0f0f0;
-                width: 100%;
-                font-size: 1rem;
-                font-weight: 500;
-                color: #2c3e50;
-                display: block;
-                transition: all 0.2s ease;
-                text-decoration: none;
-            }
-
-            .nav-menu a:last-child {
-                border-bottom: none;
-            }
-
-            .nav-menu a:hover {
-                background: #f8f9fa;
-                color: #4FA346;
-                padding-left: 2rem;
-            }
-
-            .mobile-menu-toggle {
-                z-index: 1001;
-                position: relative;
-                font-size: 1.5rem;
-            }
-
-            .nav-container {
-                justify-content: space-between;
-            }
-        }
-
-        /* Hero Section - Simplified */
-        .hero {
-            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-            min-height: 100vh;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding-top: 100px;
-        }
-
-        .hero-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .hero-text-section {
-            flex: 0 0 50%;
-            text-align: left;
-            color: #2c3e50;
-            padding-right: 2rem;
-        }
-
-        .hero-video-section {
-            flex: 0 0 auto;
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        .hero-logo {
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            animation: fadeInUp 1s ease-out 0.3s both;
-        }
-
-        .hero-logo img {
-            height: 200px;
-            width: auto;
-            filter: drop-shadow(0 8px 20px rgba(0,0,0,0.15));
-            transition: all 0.3s ease;
-        }
-
-        .hero-logo img:hover {
-            transform: scale(1.05);
-            filter: drop-shadow(0 12px 25px rgba(0,0,0,0.2));
-        }
-
-        .hero-video-container {
-            width: 100%;
-            max-width: 500px;
-            height: 350px;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            position: relative;
-            margin-left: auto;
-        }
-
-        .hero-video {
-            width: 100%;
-            height: 100%;
-            border-radius: 12px;
-            display: block;
-            object-fit: cover;
-        }
-
-
-
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, #BB2B34, #FF6B35);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-subtitle {
-            font-size: 1.4rem;
-            margin-bottom: 1.5rem;
-            color: #BB2B34;
-            font-weight: 600;
-        }
-
-        .hero-description {
-            font-size: 1.1rem;
-            margin-bottom: 2.5rem;
-            color: #666;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 3rem;
-        }
-
-        .cta-primary {
-            background: linear-gradient(45deg, #BB2B34, #e74c3c);
-            color: white;
-            padding: 1rem 2.5rem;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(187, 43, 52, 0.3);
-        }
-
-        .cta-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(187, 43, 52, 0.4);
-        }
-
-        .cta-secondary {
-            background: transparent;
-            color: #4FA346;
-            padding: 1rem 2.5rem;
-            border: 2px solid #4FA346;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-
-        .cta-secondary:hover {
-            background: #4FA346;
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        /* Stats Section */
-        .stats-section {
-            background: #f8f9fa;
-            padding: 3rem 0;
-        }
-
-        .hero-stats {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .stat-item {
-            text-align: center;
-            background: white;
-            padding: 1.5rem 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            min-width: 150px;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #4FA346;
-            display: block;
-            line-height: 1;
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            color: #666;
-            margin-top: 0.5rem;
-            font-weight: 500;
-        }
-
-        /* Main Content */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .section {
-            padding: 5rem 0;
-        }
-
-        .section h2 {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: #2c3e50;
-            position: relative;
-        }
-
-        .section h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 4px;
-            background: linear-gradient(90deg, #BB2B34, #FF6B35);
-            border-radius: 2px;
-        }
-
-        /* About Section */
-        .about {
-            background: #f8f9fa;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-text h3 {
-            font-size: 1.6rem;
-            color: #BB2B34;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .about-text p {
-            margin-bottom: 1.5rem;
-            color: #666;
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        /* About Section Layout */
-        .about-main-content {
-            margin-bottom: 3rem;
-        }
-
-        .about-text-blocks {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .text-block {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            border: 1px solid #f0f0f0;
-        }
-
-        .text-block:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-
-        .text-block h3 {
-            color: #BB2B34;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .text-block p {
-            color: #666;
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        /* Tomato Man Images - Side Layout */
-        .content-with-tomato {
-            display: flex;
-            align-items: center;
-            gap: 3rem;
-            margin: 3rem 0;
-        }
-
-        .content-text {
-            flex: 1;
-        }
-
-        .tomato-side {
-            flex: 0 0 auto;
-        }
-
-        .tomato-side img {
-            width: 300px;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 20px;
-            transition: all 0.3s ease;
-        }
-
-        .tomato-side img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Alternating layouts */
-        .tomato-left .content-with-tomato {
-            flex-direction: row;
-        }
-
-        .tomato-right .content-with-tomato {
-            flex-direction: row-reverse;
-        }
-
-        .value-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            border: 1px solid #f0f0f0;
-        }
-
-        .value-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-        }
-
-        .value-card i {
-            font-size: 2.5rem;
-            color: #BB2B34;
-            margin-bottom: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .value-card:hover i {
-            color: #4FA346;
-            transform: scale(1.1);
-        }
-
-        .value-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            color: #2c3e50;
-            font-weight: 600;
-        }
-
-        /* Departments Section */
-        .departments {
-            background: white;
-        }
-
-        .departments-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .department-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid #f0f0f0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .department-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #BB2B34, #FF6B35);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .department-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .department-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-        }
-
-        .department-card i {
-            font-size: 2.5rem;
-            color: #BB2B34;
-            margin-bottom: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .department-card:hover i {
-            color: #4FA346;
-            transform: scale(1.1);
-        }
-
-        .department-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: #2c3e50;
-            font-weight: 600;
-        }
-
-        .department-card p {
-            color: #666;
-            line-height: 1.6;
-        }
-
-
-        /* Contact Section */
-        .contact {
-            background: white;
-            color: #2c3e50;
-        }
-
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-        }
-
-        .contact-info h3 {
-            font-size: 1.8rem;
-            margin-bottom: 2rem;
-            color: #BB2B34;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-item i {
-            font-size: 1.5rem;
-            color: #4FA346;
-            margin-right: 1rem;
-            width: 30px;
-        }
-
-        .map-container {
-            background: #f8f9fa;
-            border-radius: 12px;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .map-container h3 {
-            color: #2c3e50;
-            margin-bottom: 1rem;
-        }
-
-
-        /* Footer */
-        .footer {
-            background: #4FA346;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-        }
-
-        .social-links {
-            margin: 1rem 0;
-        }
-
-        .social-links a {
-            color: white;
-            font-size: 1.5rem;
-            margin: 0 1rem;
-            transition: color 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: #FF6B35;
-        }
-
-        .social-links a[href*="wa.me"]:hover {
-            color: #25D366;
-        }
-
-        /* Floating WhatsApp Button */
-        .floating-whatsapp {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 60px;
-            height: 60px;
-            background: #25D366;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-            z-index: 1000;
-            transition: all 0.3s ease;
-            font-size: 28px;
-        }
-
-        .floating-whatsapp:hover {
-            background: #128C7E;
-            transform: scale(1.1);
-            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
-        }
-
-        .floating-whatsapp:active {
-            transform: scale(0.95);
-        }
-
-        /* Pulse animation for floating WhatsApp button */
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-            }
-            50% {
-                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.8), 0 0 0 10px rgba(37, 211, 102, 0.1);
-            }
-            100% {
-                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-            }
-        }
-
-        .floating-whatsapp {
-            animation: pulse 2s infinite;
-        }
-
-        /* Tooltip for floating WhatsApp button */
-        .floating-whatsapp::before {
-            content: "Chat with us on WhatsApp";
-            position: absolute;
-            right: 70px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: #333;
-            color: white;
-            padding: 8px 12px;
-            border-radius: 6px;
-            font-size: 14px;
-            white-space: nowrap;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 1001;
-        }
-
-        .floating-whatsapp::after {
-            content: "";
-            position: absolute;
-            right: 60px;
-            top: 50%;
-            transform: translateY(-50%);
-            border: 6px solid transparent;
-            border-left-color: #333;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 1001;
-        }
-
-        .floating-whatsapp:hover::before,
-        .floating-whatsapp:hover::after {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-            }
-
-            .mobile-menu-toggle {
-                display: block;
-            }
-
-            .logo img {
-                height: 50px;
-            }
-
-            .header .nav-container {
-                padding: 0.5rem 1rem;
-            }
-
-            .logo {
-                position: static;
-                transform: none;
-            }
-
-            .logo:hover {
-                transform: scale(1.02);
-            }
-
-            /* Mobile header contact bar */
-            .header > div:first-child {
-                padding: 0.3rem 0;
-                font-size: 0.8rem;
-            }
-
-            .header > div:first-child > div {
-                flex-direction: column;
-                gap: 0.2rem;
-                padding: 0 0.5rem;
-                text-align: center;
-            }
-
-            .header > div:first-child > div > div:first-child {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                gap: 0.3rem;
-                flex-wrap: wrap;
-            }
-
-            .header > div:first-child > div > div:last-child {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 0.3rem;
-            }
-
-            .header > div:first-child span {
-                white-space: nowrap;
-                padding: 0.1rem 0.2rem;
-                font-size: 0.75rem;
-            }
-
-            .header > div:first-child i {
-                font-size: 0.6rem;
-                margin-right: 0.3rem;
-            }
-
-            .hero {
-                padding-top: 200px;
-                min-height: 90vh;
-            }
-
-            .hero-content {
-                flex-direction: column;
-                text-align: center;
-                gap: 2rem;
-                padding: 0 1rem;
-                justify-content: center;
-            }
-
-            .hero-text-section {
-                text-align: center;
-                padding-right: 0;
-            }
-
-            .hero-video-container {
-                margin-left: 0;
-                margin: 0 auto;
-            }
-
-            .hero-title {
-                font-size: 2.2rem;
-                line-height: 1.2;
-            }
-
-            .hero-subtitle {
-                font-size: 1.1rem;
-            }
-
-            .hero-description {
-                font-size: 0.95rem;
-                margin-bottom: 2rem;
-            }
-
-            .hero-cta {
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-                margin-bottom: 2rem;
-            }
-
-            .cta-primary, .cta-secondary {
-                width: 100%;
-                max-width: 250px;
-                text-align: center;
-                padding: 1rem 2rem;
-            }
-
-            .stats-section {
-                padding: 2rem 0;
-            }
-
-            .hero-stats {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .stat-item {
-                padding: 1rem 1.5rem;
-                min-width: auto;
-            }
-
-            .hero-logo img {
-                height: 130px;
-            }
-
-            .hero-video-container {
-                max-width: 420px;
-                height: 280px;
-                margin: 0 auto;
-            }
-
-            .about-content,
-            .contact-content {
-                grid-template-columns: 1fr;
-            }
-
-            .section h2 {
-                font-size: 1.8rem;
-            }
-
-            .container {
-                padding: 0 1rem;
-            }
-
-            .departments-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .values-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .about-text-blocks {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .text-block {
-                padding: 1.5rem;
-            }
-
-            .content-with-tomato {
-                flex-direction: column;
-                text-align: center;
-                gap: 2rem;
-            }
-
-            .tomato-side img {
-                width: 250px;
-                height: 250px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero {
-                padding-top: 180px;
-            }
-
-            .hero-title {
-                font-size: 1.8rem;
-            }
-
-            .hero-logo img {
-                height: 100px;
-            }
-
-            .hero-video-container {
-                max-width: 320px;
-                height: 200px;
-                margin-bottom: 1rem;
-            }
-
-            .stats-section {
-                padding: 1.5rem 0;
-            }
-
-            .hero-stats {
-                gap: 0.8rem;
-            }
-
-
-            .stat-item {
-                padding: 0.8rem 1rem;
-            }
-
-            .tomato-side img {
-                width: 200px;
-                height: 200px;
-            }
-
-            .text-block {
-                padding: 1rem;
-            }
-
-            .about-text-blocks {
-                gap: 1rem;
-            }
-
-            .stat-number {
-                font-size: 2rem;
-            }
-
-            .section h2 {
-                font-size: 1.6rem;
-            }
-        }
-
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Animation classes */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Gradient Text */
-        .gradient-text {
-            background: linear-gradient(45deg, #BB2B34, #FF6B35);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "GroceryStore",
+      "name": "Tomatoes Bazar",
+      "url": "https://tomatoesbazar.ca",
+      "logo": "https://tomatoesbazar.ca/full-logo.png",
+      "image": "https://tomatoesbazar.ca/Gallery/574221882_17855656395557410_849179397032553801_n.jpg",
+      "description": "Tomatoes Bazar is Milton's neighbourhood grocery offering certified halal meat, fresh produce, Middle Eastern groceries, a bakery, and an in-store restaurant.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit 4-5, 700 Nipissing Rd",
+        "addressLocality": "Milton",
+        "addressRegion": "ON",
+        "postalCode": "L9T 4Z9",
+        "addressCountry": "CA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.52021,
+        "longitude": -79.86721
+      },
+      "telephone": "+19058784567",
+      "priceRange": "$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "08:00",
+        "closes": "22:00"
+      },
+      "sameAs": [
+        "https://www.instagram.com/tomatoesbazar/",
+        "https://www.tiktok.com/@tomatoes.bazar"
+      ]
+    }
+    </script>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <!-- Top Contact Bar -->
-        <div style="background: #4FA346; color: white; padding: 0.5rem 0; text-align: center; font-size: 0.9rem;">
-            <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
-                <div style="display: flex; align-items: center; gap: 2rem;">
-                    <span><i class="fas fa-phone" style="margin-right: 0.5rem;"></i>(905) 878-4567</span>
-                    <span><i class="fas fa-map-marker-alt" style="margin-right: 0.5rem;"></i>700 Nipissing Rd, Milton</span>
-                </div>
-                <div style="display: flex; align-items: center; gap: 1rem;">
-                    <span><i class="fas fa-clock" style="margin-right: 0.5rem;"></i>8AM-9PM Daily</span>
-                    <span style="background: #BB2B34; padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: 600; font-size: 0.8rem;">Fresh Daily!</span>
-                </div>
-            </div>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-inner">
+            <span><i class="fas fa-phone"></i>(905) 878-4567</span>
+            <span class="top-bar-divider">|</span>
+            <span><i class="fas fa-map-marker-alt"></i>700 Nipissing Rd, Milton</span>
+            <span class="top-bar-divider">|</span>
+            <span><i class="fas fa-clock"></i>Open Daily 8AM – 10PM</span>
         </div>
-        
-        <!-- Main Navigation -->
-        <nav class="nav-container">
-            <button class="mobile-menu-toggle">
-                <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Header / Nav -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
             </button>
-            <a href="#" class="logo">
-                <img src="full-logo.png" alt="Tomatoes Bazar Logo">
+            <a href="#home" class="nav-logo">
+                <img src="full-logo.png" alt="Tomatoes Bazar">
             </a>
-            <ul class="nav-menu">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#departments">Departments</a></li>
-                <li><a href="#offerings">Offerings</a></li>
-                <li><a href="https://tomatoesbazar.ca/blog">Blogs</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#galleries">Gallery</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="#contact" class="nav-cta">Visit Us</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero: Photo Carousel + Video -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text-section">
-                <div class="hero-logo">
-                    <img src="logo.png" alt="Tomatoes Bazar Logo">
-                </div>
-                <h1 class="hero-title">Freshness. Quality. Family.</h1>
-                <p class="hero-subtitle">Milton's Premier Grocery Experience</p>
-                <p class="hero-description">
-                    Welcome to <strong>Tomatoes Bazar</strong> - where fresh produce, quality halal meat, 
-                    and artisanal baked goods come together in a family-driven marketplace built on 
-                    trust, tradition, and a passion for exceptional food.
-                </p>
-                <div class="hero-cta">
-                    <a href="#departments" class="cta-primary">Explore Us!</a>
-                    <a href="#contact" class="cta-secondary">Visit Store</a>
+
+        <!-- Photo carousel background -->
+        <div class="hero-carousel" id="heroCarousel">
+            <div class="hero-slide active">
+                <img src="Gallery/574221882_17855656395557410_849179397032553801_n.jpg" alt="Inside Tomatoes Bazar — Milton's neighbourhood grocery store with fresh produce, bakery, and aisles" loading="eager">
+            </div>
+            <div class="hero-slide">
+                <img src="Gallery/produce.jpg" alt="Fresh fruit and vegetable section at Tomatoes Bazar Milton" loading="lazy">
+            </div>
+            <div class="hero-slide">
+                <img src="Gallery/meat (5).jpg" alt="Premium certified halal ribeye cuts at Tomatoes Bazar butchery Milton" loading="lazy">
+            </div>
+            <div class="hero-slide">
+                <img src="Gallery/spices.jpg" alt="Middle Eastern spices and grocery aisles at Tomatoes Bazar Milton" loading="lazy">
+            </div>
+            <div class="hero-slide">
+                <img src="Gallery/tomato.jpg" alt="Vine-ripe tomatoes and fresh vegetables at Tomatoes Bazar Milton" loading="lazy">
+            </div>
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <p class="hero-eyebrow">Milton's Neighbourhood Grocery</p>
+                <h1 class="hero-headline">Freshness.<br>Quality.<br>Family.</h1>
+                <div class="hero-actions">
+                    <a href="#departments" class="btn btn-primary">Explore Our Store</a>
+                    <a href="#contact" class="btn btn-outline">Find Us</a>
                 </div>
             </div>
-            <div class="hero-video-container">
-                <video class="hero-video" autoplay playsinline controls preload="auto">
-                    <source src="TomatoesCartoon.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+
+            <button class="hero-nav prev" id="heroPrev"><i class="fas fa-chevron-left"></i></button>
+            <button class="hero-nav next" id="heroNext"><i class="fas fa-chevron-right"></i></button>
+            <div class="hero-dots" id="heroDots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
             </div>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats-section">
+    <!-- Stats Strip -->
+    <div class="stats-strip">
         <div class="container">
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <span class="stat-number">30+</span>
-                    <span class="stat-label">Years Experience</span>
+            <div class="stats-row">
+                <div class="stat">
+                    <strong>30+</strong>
+                    <span>Years of Experience</span>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-label">Halal Certified</span>
+                <div class="stat-sep"></div>
+                <div class="stat">
+                    <strong>100%</strong>
+                    <span>Halal Certified</span>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">Fresh</span>
-                    <span class="stat-label">Daily Delivery</span>
+                <div class="stat-sep"></div>
+                <div class="stat">
+                    <strong>Fresh</strong>
+                    <span>Daily Deliveries</span>
+                </div>
+                <div class="stat-sep"></div>
+                <div class="stat">
+                    <strong>5</strong>
+                    <span>Departments</span>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- About Section -->
-    <section id="about" class="section about">
+    <!-- About -->
+    <section id="about" class="section about-section">
         <div class="container">
-            <h2 class="gradient-text">About Us</h2>
-            <div class="about-content">
-                <div class="about-main-content">
-                    <div class="tomato-left">
-                        <div class="content-with-tomato">
-                            <div class="content-text">
-                                <h3>Our Story</h3>
-                                <p>Tomatoes Bazar is a family business with a big heart. Founded by a father of five with more than 30 years of retail experience across four countries, our vision is simple: bring families together around good food at great prices.</p>
-                                <p>Our logo and brand were created with love — a collective effort of family and friends — reflecting who we are: warm, welcoming, and fresh.</p>
+            <div class="section-header">
+                <span class="section-label">Our Story</span>
+                <h2>A Family Business<br>with a Big Heart</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="lead-text">Founded by a father of five with more than 30 years of retail experience across four countries, our vision is simple: bring families together around good food at great prices.</p>
+                    <p>Our logo and brand were created with love — a collective effort of family and friends — reflecting who we are: warm, welcoming, and fresh.</p>
+                    <div class="about-pillars">
+                        <div class="pillar">
+                            <div class="pillar-icon"><i class="fas fa-heart"></i></div>
+                            <div>
+                                <h4>Family-Owned</h4>
+                                <p>Every customer is treated like family.</p>
                             </div>
-                            <div class="tomato-side">
-                                <img src="TomatoMan1.png" alt="Tomato Man Character">
+                        </div>
+                        <div class="pillar">
+                            <div class="pillar-icon"><i class="fas fa-leaf"></i></div>
+                            <div>
+                                <h4>Freshness First</h4>
+                                <p>Handpicked produce, delivered daily.</p>
+                            </div>
+                        </div>
+                        <div class="pillar">
+                            <div class="pillar-icon"><i class="fas fa-handshake"></i></div>
+                            <div>
+                                <h4>Trust & Honesty</h4>
+                                <p>Transparency at the heart of everything.</p>
+                            </div>
+                        </div>
+                        <div class="pillar">
+                            <div class="pillar-icon"><i class="fas fa-dollar-sign"></i></div>
+                            <div>
+                                <h4>Affordable</h4>
+                                <p>Quality food for every family budget.</p>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="about-text-blocks">
-                        <div class="text-block">
-                            <h3>Our Mission</h3>
-                            <p>To provide Milton's families with the freshest produce, quality halal meats, and baked goods, all while creating a new and exciting shopping experience.</p>
-                        </div>
-                        
-                        <div class="text-block">
-                            <h3>Our Vision</h3>
-                            <p>To become the go-to neighborhood supermarket where quality meets affordability and every customer feels at home.</p>
-                        </div>
-                    </div>
                 </div>
-                <div class="values-grid">
-                    <div class="value-card">
-                        <i class="fas fa-heart"></i>
-                        <h3>Family-Owned</h3>
-                        <p>Built on 30+ years of retail experience with a focus on community, quality, and value.</p>
-                    </div>
-                    <div class="value-card">
-                        <i class="fas fa-leaf"></i>
-                        <h3>Freshness & Quality</h3>
-                        <p>Handpicked produce and quality products that bring healthy meals to your table.</p>
-                    </div>
-                    <div class="value-card">
-                        <i class="fas fa-handshake"></i>
-                        <h3>Trust & Honesty</h3>
-                        <p>We believe in building lasting relationships with our community through transparency.</p>
-                    </div>
-                    <div class="value-card">
-                        <i class="fas fa-dollar-sign"></i>
-                        <h3>Affordability</h3>
-                        <p>Making fresh, quality food accessible to every family with unbeatable prices.</p>
-                    </div>
+                <div class="about-store-photo">
+                    <img src="Gallery/574221882_17855656395557410_849179397032553801_n.jpg"
+                         alt="Inside Tomatoes Bazar grocery store in Milton, Ontario" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Mission / Vision -->
+            <div class="mv-row">
+                <div class="mv-card">
+                    <h3>Our Mission</h3>
+                    <p>To provide Milton's families with the freshest produce, quality halal meats, and baked goods — all while creating a new and exciting shopping experience.</p>
+                </div>
+                <div class="mv-card accent">
+                    <h3>Our Vision</h3>
+                    <p>To become the go-to neighbourhood supermarket where quality meets affordability and every customer feels at home.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Departments Section -->
-    <section id="departments" class="section departments">
+    <!-- Departments -->
+    <section id="departments" class="section departments-section">
         <div class="container">
-            <h2 class="gradient-text">What We Offer</h2>
-            <div class="tomato-right">
-                <div class="content-with-tomato">
-                    <div class="content-text">
-                        <p style="color: #666; font-size: 1.1rem; margin-bottom: 0;">
-                            Discover our wide range of fresh products and services designed to meet all your grocery needs.
-                        </p>
-                    </div>
-                    <div class="tomato-side">
-                        <img src="TomatoMan2.png" alt="Tomato Man Char">
-                    </div>
-                </div>
+            <div class="section-header">
+                <span class="section-label">What We Offer</span>
+                <h2>Five Departments,<br>One Destination</h2>
             </div>
             <div class="departments-grid">
-                <div class="department-card">
-                    <i class="fas fa-apple-alt"></i>
-                    <h3>Fresh Produce</h3>
-                    <p>Handpicked fruits and vegetables at prices that make healthy living affordable. From seasonal favorites to exotic varieties, we bring you the freshest selection daily.</p>
+                <div class="dept-card">
+                    <div class="dept-img">
+                        <img src="Gallery/produce.jpg" alt="Fresh fruit and vegetable bins at Tomatoes Bazar Milton" loading="lazy">
+                    </div>
+                    <div class="dept-body">
+                        <div class="dept-icon"><i class="fas fa-apple-alt"></i></div>
+                        <h3>Fresh Produce</h3>
+                        <p>Handpicked fruits and vegetables sourced daily. From seasonal favourites to exotic varieties, we bring you maximum freshness at affordable prices.</p>
+                    </div>
                 </div>
-                <div class="department-card">
-                    <i class="fas fa-drumstick-bite"></i>
-                    <h3>Halal Meat</h3>
-                    <p>High-quality, fresh, and 100% halal — from everyday staples to specialty cuts. Your trusted source for certified halal meat with quality cuts and fair pricing.</p>
+                <div class="dept-card featured">
+                    <div class="dept-img">
+                        <img src="Gallery/meat (5).jpg" alt="Premium certified halal ribeye cuts at Tomatoes Bazar butchery Milton" loading="lazy">
+                    </div>
+                    <div class="dept-body">
+                        <div class="dept-icon"><i class="fas fa-drumstick-bite"></i></div>
+                        <h3>Halal Meat</h3>
+                        <p>100% certified halal, fresh daily. Everyday staples to specialty cuts — your trusted source for quality, authentic halal meat with fair pricing.</p>
+                        <p class="dept-hours"><i class="fas fa-clock"></i> Butchery: 9AM – 8PM daily</p>
+                        <span class="dept-badge">Halal Certified</span>
+                    </div>
                 </div>
-                <div class="department-card">
-                    <i class="fas fa-bread-slice"></i>
-                    <h3>Bakery</h3>
-                    <p>Freshly baked bread, pastries, and sweets daily to bring warmth to your home. From traditional loaves to artisanal pastries, made fresh every morning.</p>
+                <div class="dept-card">
+                    <div class="dept-img">
+                        <img src="Bakery/TB_Bakery.jpg" alt="Freshly baked manakeesh and flatbreads at TB Bakery inside Tomatoes Bazar Milton" loading="lazy">
+                    </div>
+                    <div class="dept-body">
+                        <div class="dept-icon"><i class="fas fa-bread-slice"></i></div>
+                        <h3>Bakery</h3>
+                        <p>Freshly baked bread, pastries, and sweets every morning. Traditional loaves to artisanal treats, made with care to bring warmth to your home.</p>
+                        <p class="dept-hours"><i class="fas fa-clock"></i> Bakery: 9AM – 7PM daily</p>
+                    </div>
                 </div>
-                <div class="department-card">
+                <div class="dept-card">
+                    <div class="dept-img dept-img-logo">
+                        <img src="Copy of GrandShawarama_Promo_Mar20-22.png" alt="Grand Shawarma — Authentic Syrian Flavour" loading="lazy">
+                    </div>
+                    <div class="dept-body">
+                        <div class="dept-icon"><i class="fas fa-utensils"></i></div>
+                        <h3>Grand Shawarma</h3>
+                        <p>Authentic, freshly prepared meals right inside the store. Middle Eastern flavours to family favourites — every dish cooked with love.</p>
+                        <p class="dept-hours"><i class="fas fa-clock"></i> Tue–Thu 10AM–9PM · Fri–Sun 10AM–11PM</p>
+                        <p class="dept-hours dept-hours-note"><i class="fas fa-moon"></i> Closed Mondays</p>
+                    </div>
+                </div>
+                <div class="dept-card">
+                    <div class="dept-img">
+                        <img src="Gallery/spices.jpg" alt="Middle Eastern spices and grocery aisles at Tomatoes Bazar Milton" loading="lazy">
+                    </div>
+                    <div class="dept-body">
+                        <div class="dept-icon"><i class="fas fa-shopping-cart"></i></div>
+                        <h3>Grocery</h3>
+                        <p>A wide range of Middle Eastern essentials — spices, grains, canned goods, oils, and more. Everything needed for authentic home cooking.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bakery Feature -->
+    <section id="bakery" class="section bakery-feature">
+        <div class="container">
+            <div class="bakery-grid">
+                <div class="bakery-photo">
+                    <img src="Bakery/TB_Bakery.jpg" alt="Fresh manakeesh and flatbreads from TB Bakery inside Tomatoes Bazar Milton" loading="lazy">
+                </div>
+                <div class="bakery-content">
+                    <span class="section-label">Fresh Baked Daily</span>
+                    <h2 class="bakery-title">TB Bakery</h2>
+                    <p class="bakery-desc">Authentic manakeesh, flatbreads, and sweets freshly baked every morning. From classic zaatar to indulgent nutella creations — every piece made with care and served warm.</p>
+                    <p class="bakery-hours-line"><i class="fas fa-clock"></i> Open daily 9:00 AM – 7:00 PM</p>
+
+                    <div class="specials-block">
+                        <p class="specials-title"><i class="fas fa-star"></i> Manakeesh of the Day</p>
+                        <div class="specials-list" id="specialsList">
+                            <div class="special-row" data-day="1"><span class="day">Mon</span><span class="item">Zaatar or Muhammara</span><span class="price">$3.99</span></div>
+                            <div class="special-row" data-day="2"><span class="day">Tue</span><span class="item">Meat</span><span class="price">$4.99</span></div>
+                            <div class="special-row" data-day="3"><span class="day">Wed</span><span class="item">Chicken</span><span class="price">$4.99</span></div>
+                            <div class="special-row" data-day="4"><span class="day">Thu</span><span class="item">Cheese</span><span class="price">$4.99</span></div>
+                            <div class="special-row" data-day="5"><span class="day">Fri</span><span class="item">Spinach</span><span class="price">$4.99</span></div>
+                            <div class="special-row" data-day="6"><span class="day">Sat</span><span class="item">Pepperoni</span><span class="price">$4.99</span></div>
+                            <div class="special-row" data-day="0"><span class="day">Sun</span><span class="item">Nutella w/ Strawberry or Banana</span><span class="price">$4.99</span></div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-green menu-trigger"
+                            data-menu="Bakery/Copy of Tomatoes Bazar Bakery Menu &amp; Item Spotlight (3).jpg"
+                            data-label="Full Bakery Menu">
+                        <i class="fas fa-utensils"></i>&nbsp; View Full Bakery Menu
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grand Shawarma Feature -->
+    <section class="shawarma-feature">
+        <div class="container">
+            <div class="shawarma-grid">
+                <div class="shawarma-content">
+                    <span class="section-label">In-Store Restaurant</span>
+                    <h2 class="shawarma-title">Grand Shawarma</h2>
+                    <p class="shawarma-desc">A full restaurant right inside the store — freshly prepared shawarma, grills, and authentic Middle Eastern plates made to order. The perfect stop before or after your grocery run.</p>
+                    <div class="shawarma-hours">
+                        <div class="sh-row">
+                            <span>Tuesday – Thursday</span>
+                            <span>10:00 AM – 9:00 PM</span>
+                        </div>
+                        <div class="sh-row">
+                            <span>Friday – Sunday</span>
+                            <span>10:00 AM – 11:00 PM</span>
+                        </div>
+                        <div class="sh-row closed">
+                            <span>Monday</span>
+                            <span>Closed</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="shawarma-logo-display">
+                    <img src="Copy of GrandShawarama_Promo_Mar20-22.png"
+                         alt="Grand Shawarma — Authentic Syrian Flavour" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us -->
+    <section id="offerings" class="section why-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Why Choose Us</span>
+                <h2>What Makes<br>Us Different</h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <i class="fas fa-truck"></i>
+                    <h4>Daily Fresh Delivery</h4>
+                    <p>Produce and meat deliveries every day so you always get the freshest products available.</p>
+                </div>
+                <div class="why-card">
+                    <i class="fas fa-certificate"></i>
+                    <h4>100% Halal Certified</h4>
+                    <p>All meat products are certified halal, giving complete confidence in quality and authenticity.</p>
+                </div>
+                <div class="why-card">
+                    <i class="fas fa-users"></i>
+                    <h4>Family-Owned & Operated</h4>
+                    <p>We treat every customer like family and are committed to lasting relationships in our community.</p>
+                </div>
+                <div class="why-card">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h4>Competitive Pricing</h4>
+                    <p>Quality food should be accessible to everyone — great prices without compromising on quality.</p>
+                </div>
+                <div class="why-card">
                     <i class="fas fa-utensils"></i>
-                    <h3>Restaurant</h3>
-                    <p>Enjoy authentic, freshly prepared meals right inside the store. From Middle Eastern flavors to family favorites, every dish is prepared with care and love.</p>
+                    <h4>Grand Shawarma Restaurant</h4>
+                    <p>Freshly prepared Middle Eastern meals right inside the store. Tue–Thu 10AM–9PM, Fri–Sun 10AM–11PM.</p>
                 </div>
-                <div class="department-card">
-                    <i class="fas fa-shopping-cart"></i>
-                    <h3>Grocery</h3>
-                    <p>A wide range of Middle Eastern grocery essentials — spices, grains, canned goods, oils, and more. Everything you need for authentic home cooking.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Store Offerings Section -->
-    <section id="offerings" class="section" style="background: #f8f9fa;">
-        <div class="container">
-            <h2 class="gradient-text">What Makes Us Special</h2>
-            <div class="tomato-left">
-                <div class="content-with-tomato">
-                    <div class="content-text">
-                        <p style="color: #666; font-size: 1.1rem; margin-bottom: 0;">
-                            Experience the difference that comes from 30+ years of serving our community with fresh, quality products and exceptional service.
-                        </p>
-                    </div>
-                    <div class="tomato-side">
-                        <img src="TomatoMan3.png" alt="Tomato Man Character">
-                    </div>
-                </div>
-            </div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
-                <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s ease; border: 1px solid #f0f0f0;">
-                    <i class="fas fa-truck" style="font-size: 3rem; color: #BB2B34; margin-bottom: 1.5rem;"></i>
-                    <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: #2c3e50; font-weight: 600;">Daily Fresh Delivery</h3>
-                    <p style="color: #666; line-height: 1.6;">We receive fresh produce and meat deliveries daily to ensure you always get the freshest products available.</p>
-                    </div>
-                <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s ease; border: 1px solid #f0f0f0;">
-                    <i class="fas fa-certificate" style="font-size: 3rem; color: #BB2B34; margin-bottom: 1.5rem;"></i>
-                    <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: #2c3e50; font-weight: 600;">100% Halal Certified</h3>
-                    <p style="color: #666; line-height: 1.6;">All our meat products are certified halal, giving you complete confidence in the quality and authenticity of our offerings.</p>
-                    </div>
-                <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s ease; border: 1px solid #f0f0f0;">
-                    <i class="fas fa-users" style="font-size: 3rem; color: #BB2B34; margin-bottom: 1.5rem;"></i>
-                    <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: #2c3e50; font-weight: 600;">Family-Owned & Operated</h3>
-                    <p style="color: #666; line-height: 1.6;">As a family business, we treat every customer like family and are committed to building lasting relationships in our community.</p>
-                    </div>
-                <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s ease; border: 1px solid #f0f0f0;">
-                    <i class="fas fa-dollar-sign" style="font-size: 3rem; color: #BB2B34; margin-bottom: 1.5rem;"></i>
-                    <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: #2c3e50; font-weight: 600;">Competitive Pricing</h3>
-                    <p style="color: #666; line-height: 1.6;">We believe quality food should be accessible to everyone, which is why we offer competitive prices without compromising on quality.</p>
-                    </div>
-                <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s ease; border: 1px solid #f0f0f0;">
-                    <i class="fas fa-utensils" style="font-size: 3rem; color: #BB2B34; margin-bottom: 1.5rem;"></i>
-                    <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: #2c3e50; font-weight: 600;">In-Store Restaurant</h3>
-                    <p style="color: #666; line-height: 1.6;">Take a break from shopping and enjoy freshly prepared meals in our in-store restaurant featuring authentic Middle Eastern cuisine.</p>
-                </div>
-                <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s ease; border: 1px solid #f0f0f0;">
-                    <i class="fas fa-clock" style="font-size: 3rem; color: #BB2B34; margin-bottom: 1.5rem;"></i>
-                    <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: #2c3e50; font-weight: 600;">Extended Hours</h3>
-                    <p style="color: #666; line-height: 1.6;">Open 8AM to 9PM daily, we're here when you need us most, making it convenient for busy families to shop for fresh groceries.</p>
+                <div class="why-card">
+                    <i class="fas fa-clock"></i>
+                    <h4>Extended Hours</h4>
+                    <p>Open 8AM – 10PM daily, here when you need us most for busy families on the go.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section contact">
+    <!-- Gallery -->
+    <section id="galleries" class="section gallery-section">
         <div class="container">
-            <h2 class="gradient-text">Visit Us Today</h2>
-            <div class="tomato-left">
-                <div class="content-with-tomato">
-                    <div class="content-text">
-                        <p style="color: #666; font-size: 1.1rem; margin-bottom: 0;">
-                            Come visit us at our Milton location and experience the warmth of our family business.
-                        </p>
+            <div class="section-header">
+                <span class="section-label">Inside Our Store</span>
+                <h2>Fresh Every Day,<br>Right Here in Milton</h2>
+            </div>
+
+            <div class="gallery-hero-img">
+                <img src="Gallery/574221882_17855656395557410_849179397032553801_n.jpg"
+                     alt="Wide view inside Tomatoes Bazar grocery store in Milton Ontario — fresh produce section, bakery, and full grocery aisles" loading="lazy">
+            </div>
+
+            <div class="gallery-categories">
+                <div class="gallery-cat">
+                    <p class="gallery-cat-title"><i class="fas fa-apple-alt"></i> Fresh Produce</p>
+                    <div class="gallery-grid-3">
+                        <img src="Gallery/produce.jpg" alt="Fresh fruit and vegetable bins at Tomatoes Bazar Milton Ontario" loading="lazy">
+                        <img src="Gallery/tomato.jpg" alt="Vine-ripe tomatoes and fresh cucumbers at Tomatoes Bazar Milton" loading="lazy">
+                        <img src="Gallery/produce1.jpg" alt="Refrigerated fresh produce display with fruits and vegetables at Tomatoes Bazar" loading="lazy">
                     </div>
-                    <div class="tomato-side">
-                        <img src="TomatoMan4.png" alt="Tomato Man Character">
+                </div>
+
+                <div class="gallery-cat">
+                    <p class="gallery-cat-title"><i class="fas fa-drumstick-bite"></i> Halal Meat Counter</p>
+                    <div class="gallery-grid-3">
+                        <img src="Gallery/meat (1).jpg" alt="Fresh certified halal beef steaks at Tomatoes Bazar butchery in Milton" loading="lazy">
+                        <img src="Gallery/meat (5).jpg" alt="Premium halal ribeye cuts at Tomatoes Bazar Milton" loading="lazy">
+                        <img src="Gallery/meat (3).jpg" alt="Halal lamb and bone-in beef cuts at Tomatoes Bazar butchery" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="gallery-cat">
+                    <p class="gallery-cat-title"><i class="fas fa-shopping-basket"></i> Grocery &amp; Pantry</p>
+                    <div class="gallery-grid-3">
+                        <img src="Gallery/spices.jpg" alt="Middle Eastern spice mixes and grocery products at Tomatoes Bazar Milton" loading="lazy">
+                        <img src="Gallery/products.jpg" alt="Honey, dips, ghee and specialty pantry items at Tomatoes Bazar Milton" loading="lazy">
+                        <img src="Gallery/oil.jpg" alt="Sunflower oil and extra virgin olive oil selection at Tomatoes Bazar Milton" loading="lazy">
                     </div>
                 </div>
             </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Get In Touch</h3>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Find Us</span>
+                <h2>Come Visit<br>Us Today</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-details">
                     <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div>
-                            <strong>Address:</strong><br>
-                            Unit 4-5, 700 Nipissing Rd<br>
-                            Milton, ON L9T 4Z9
-                        </div>
-                    </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <strong>Phone:</strong><br>
-                                (905) 878-4567
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-whatsapp"></i>
-                            <div>
-                                <strong>WhatsApp:</strong><br>
-                                <a href="https://wa.me/14374225810" target="_blank" style="color: #4FA346; text-decoration: none;">Chat with us</a>
-                            </div>
-                        </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <strong>Email:</strong><br>
-                            info@tomatoesbazar.ca
+                            <strong>Address</strong>
+                            <p>Unit 4–5, 700 Nipissing Rd<br>Milton, ON L9T 4Z9</p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-clock"></i>
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
                         <div>
-                            <strong>Store Hours:</strong><br>
-                            Monday - Sunday: 8:00 AM - 10:00 PM
+                            <strong>Phone</strong>
+                            <p><a href="tel:+19058784567">(905) 878-4567</a></p>
                         </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div>
+                            <strong>WhatsApp</strong>
+                            <p><a href="https://wa.me/14374225810" target="_blank">Chat with us</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <strong>Email</strong>
+                            <p><a href="mailto:info@tomatoesbazar.com">info@tomatoesbazar.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <strong>Store Hours</strong>
+                            <p>Store: Mon–Sun 8:00 AM – 10:00 PM</p>
+                            <p>Bakery: Daily 9:00 AM – 7:00 PM</p>
+                            <p>Butchery: Daily 9:00 AM – 8:00 PM</p>
+                            <p>Grand Shawarma: Tue–Thu 10AM–9PM · Fri–Sun 10AM–11PM · <em>Mon closed</em></p>
+                        </div>
+                    </div>
+                    <div class="social-row">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/tomatoesbazar/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@tomatoes.bazar" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/14374225810" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="Snapchat"><i class="fab fa-snapchat"></i></a>
                     </div>
                 </div>
-                <div class="map-container">
-                    <h3>Find Us</h3>
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d347.9813608070812!2d-79.86720636187212!3d43.520210433073544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b6f592ab58c1f%3A0x2bcbf6f5e13f7a69!2sTomatoes%20Bazar!5e0!3m2!1sen!2sca!4v1757963976953!5m2!1sen!2sca" 
-                        width="100%" 
-                        height="300" 
-                        style="border:0; border-radius: 8px;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
+                <div class="contact-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d347.9813608070812!2d-79.86720636187212!3d43.520210433073544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b6f592ab58c1f%3A0x2bcbf6f5e13f7a69!2sTomatoes%20Bazar!5e0!3m2!1sen!2sca!4v1757963976953!5m2!1sen!2sca"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" title="Tomatoes Bazar Map">
                     </iframe>
                 </div>
             </div>
@@ -1340,193 +514,60 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Tomatoes Bazar. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/tomatoesbazar/#"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.tiktok.com/@tomatoes.bazar?_t=ZS-8zkws2DEqJ8&_r=1"><i class="fab fa-tiktok"></i></a>
-                <a href="https://wa.me/14374225810" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                <a href="#"><i class="fab fa-snapchat"></i></a>
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <img src="full-logo.png" alt="Tomatoes Bazar" class="footer-logo">
+                    <p>Milton's neighbourhood grocery — fresh, halal, and always family-first.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#departments">Departments</a></li>
+                        <li><a href="#galleries">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 700 Nipissing Rd, Milton ON</p>
+                    <p><i class="fas fa-phone"></i> (437) 422-5810</p>
+                    <p><i class="fas fa-clock"></i> 8AM – 10PM Daily</p>
+                </div>
             </div>
-            <p>Follow us on social media for weekly specials, community events, and more!</p>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Tomatoes Bazar. All rights reserved.</p>
+                <p>Follow us for weekly specials &amp; community updates!</p>
+            </div>
         </div>
     </footer>
 
+    <!-- Floating WhatsApp Group Join -->
+    <a href="https://chat.whatsapp.com/LOfc370Q6PoHjvADxJJck9" target="_blank" rel="noopener"
+       class="whatsapp-group-float" title="Join our WhatsApp Group">
+        <i class="fab fa-whatsapp"></i>
+        <span class="wg-label">Join Group</span>
+    </a>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+    <!-- Menu Lightbox -->
+    <div class="menu-lightbox" id="menuLightbox" role="dialog" aria-modal="true" aria-label="Menu">
+        <div class="lightbox-bg" id="lightboxBg"></div>
+        <div class="lightbox-inner">
+            <button class="lightbox-close" id="lightboxClose" aria-label="Close"><i class="fas fa-times"></i></button>
+            <img src="" alt="" id="lightboxImg">
+        </div>
+    </div>
 
-        // Fade in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+    <!-- Mobile Sticky Bar -->
+    <div class="mobile-sticky-bar" id="mobileStickyBar">
+        <a href="https://maps.google.com/?q=700+Nipissing+Rd,+Milton,+ON+L9T+4Z9"
+           target="_blank" rel="noopener" class="sticky-directions">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Get Directions</span>
+        </a>
+    </div>
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all sections for fade-in animation
-        document.querySelectorAll('.section').forEach(section => {
-            section.classList.add('fade-in');
-            observer.observe(section);
-        });
-
-        // Video control with overlay button
-        window.addEventListener('load', () => {
-            const video = document.querySelector('.hero-video');
-            if (!video) return;
-
-            // Ensure single play
-            video.loop = false;
-            video.muted = true; // Start muted for autoplay
-            
-            // Create overlay button with blurred background
-            const videoContainer = document.querySelector('.hero-video-container');
-            
-            // Create blurred background overlay
-            const blurOverlay = document.createElement('div');
-            blurOverlay.style.cssText = `
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: rgba(0,0,0,0.3);
-                backdrop-filter: blur(8px);
-                -webkit-backdrop-filter: blur(8px);
-                z-index: 5;
-                border-radius: 20px;
-            `;
-            
-            // Create gradient border wrapper
-            const buttonWrapper = document.createElement('div');
-            buttonWrapper.style.cssText = `
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background: linear-gradient(135deg, #BB2B34, #FF6B35, #e74c3c);
-                padding: 4px;
-                border-radius: 44px;
-                z-index: 10;
-                box-shadow: 0 10px 30px rgba(187, 43, 52, 0.4);
-            `;
-            
-            const overlayButton = document.createElement('button');
-            overlayButton.innerHTML = '<span style="background: linear-gradient(135deg, #BB2B34, #FF6B35, #e74c3c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 700;">Meet Mr. Tomato!</span><img src="TomatoMan1.png" alt="Tomato Man" style="width: 120px; height: 120px; margin-left: 15px; vertical-align: middle; border-radius: 50%;">';
-            overlayButton.style.cssText = `
-                background: linear-gradient(135deg, #ffffff, #f8f9fa);
-                color: #2c3e50;
-                border: none;
-                padding: 15px 20px;
-                border-radius: 40px;
-                font-size: 20px;
-                font-weight: 600;
-                cursor: pointer;
-                box-shadow: inset 0 2px 4px rgba(255,255,255,0.3), 0 2px 8px rgba(0,0,0,0.1);
-                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-                font-family: 'Inter', sans-serif;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                width: 100%;
-                height: 100%;
-                min-width: 280px;
-                letter-spacing: 0.5px;
-            `;
-
-            // Hover effects
-            buttonWrapper.addEventListener('mouseenter', () => {
-                buttonWrapper.style.transform = 'translate(-50%, -50%) scale(1.08)';
-                buttonWrapper.style.boxShadow = '0 15px 40px rgba(187, 43, 52, 0.6)';
-                overlayButton.style.background = 'linear-gradient(135deg, #ffffff, #ffffff)';
-                overlayButton.style.boxShadow = 'inset 0 2px 4px rgba(255,255,255,0.5), 0 4px 12px rgba(0,0,0,0.15)';
-            });
-
-            buttonWrapper.addEventListener('mouseleave', () => {
-                buttonWrapper.style.transform = 'translate(-50%, -50%) scale(1)';
-                buttonWrapper.style.boxShadow = '0 10px 30px rgba(187, 43, 52, 0.4)';
-                overlayButton.style.background = 'linear-gradient(135deg, #ffffff, #f8f9fa)';
-                overlayButton.style.boxShadow = 'inset 0 2px 4px rgba(255,255,255,0.3), 0 2px 8px rgba(0,0,0,0.1)';
-            });
-
-            // Click handler
-            overlayButton.addEventListener('click', () => {
-                // Remove button wrapper and blur overlay
-                buttonWrapper.remove();
-                blurOverlay.remove();
-                
-                // Play video unmuted
-                video.muted = false;
-                video.volume = 1;
-                video.currentTime = 0;
-                video.play();
-            });
-
-            // Add elements to container
-            videoContainer.style.position = 'relative';
-            videoContainer.appendChild(blurOverlay);
-            buttonWrapper.appendChild(overlayButton);
-            videoContainer.appendChild(buttonWrapper);
-
-            // Keep last frame when video ends
-            video.addEventListener('ended', () => {
-                video.pause();
-            });
-        });
-
-        // Mobile menu toggle
-        document.addEventListener('DOMContentLoaded', function() {
-        const mobileToggle = document.querySelector('.mobile-menu-toggle');
-        const navMenu = document.querySelector('.nav-menu');
-
-            if (mobileToggle && navMenu) {
-                mobileToggle.addEventListener('click', function(e) {a
-                    e.preventDefault();
-                    e.stopPropagation();
-                    console.log('Hamburger clicked'); // Debug log
-                    navMenu.classList.toggle('active');
-                });
-
-                // Close mobile menu when clicking on a link
-                document.querySelectorAll('.nav-menu a').forEach(link => {
-                    link.addEventListener('click', function() {
-                        navMenu.classList.remove('active');
-                    });
-                });
-
-                // Close mobile menu when clicking outside
-                document.addEventListener('click', function(e) {
-                    if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
-                        navMenu.classList.remove('active');
-                    }
-                });
-
-                // Close mobile menu when pressing escape key
-                document.addEventListener('keydown', function(e) {
-                    if (e.key === 'Escape' && navMenu.classList.contains('active')) {
-                        navMenu.classList.remove('active');
-                    }
-                });
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

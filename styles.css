@@ -1135,44 +1135,37 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 @media (max-width: 768px) {
-    .gallery-grid-3 { grid-template-columns: repeat(2, 1fr); }
-    .blog-grid { grid-template-columns: 1fr; }
 
-    /* Mobile sticky bar */
-    .mobile-sticky-bar { display: flex; }
+    /* ── Body / global ── */
     body { padding-bottom: 68px; }
+    .container { padding: 0 1.25rem; }
 
-    /* Float buttons above sticky bar */
-    .whatsapp-float { bottom: 5.25rem; right: 1rem; width: 48px; height: 48px; font-size: 1.25rem; }
-    .whatsapp-group-float {
-        bottom: 5.25rem;
-        left: 1rem;
-        height: 48px;
-        width: 48px;
-        padding: 0;
-        justify-content: center;
-        border-radius: 50%;
-    }
-    .whatsapp-group-float .wg-label { display: none; }
-
-    /* Shawarma feature */
-    .shawarma-grid { grid-template-columns: 1fr; gap: 2rem; }
-    .shawarma-logo-display { order: -1; min-height: 200px; padding: 2rem 1.5rem; }
-    .shawarma-logo-display img { max-width: 240px; }
-
-    /* Bakery feature */
-    .bakery-grid { grid-template-columns: 1fr; gap: 2rem; }
-    .bakery-photo { position: static; }
-
-    /* About visual */
-    .about-store-photo { min-height: 220px; }
-    .article-inner { padding: 1.75rem 1.25rem 2.5rem; }
-
-    .top-bar-inner { justify-content: center; }
+    /* ── Top bar — compact single row: address + hours only ── */
+    .tb-phone { display: none; }
     .top-bar-divider { display: none; }
+    .top-bar-inner {
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 0.4rem 1.25rem;
+        flex-wrap: nowrap;
+    }
+    .top-bar-inner span { font-size: 0.72rem; }
+    .tb-address a { color: inherit; }
 
-    /* Mobile nav */
-    .mobile-toggle { display: flex; }
+    /* ── Nav — centered logo, compact height ── */
+    .nav {
+        position: relative;
+        padding: 0 1.1rem;
+        height: 60px;
+        justify-content: space-between;
+    }
+    .nav-logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .nav-logo img { height: 40px; }
+    .mobile-toggle { display: flex; z-index: 1; }
     .nav-links {
         position: absolute;
         top: 100%;
@@ -1180,56 +1173,126 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
         background: var(--white);
         flex-direction: column;
         align-items: flex-start;
-        padding: 1rem 2rem 1.5rem;
+        padding: 0.75rem 1.25rem 1.25rem;
         border-bottom: 1px solid var(--border);
-        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-        gap: 0.15rem;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        gap: 0.1rem;
         display: none;
     }
     .nav-links.open { display: flex; }
-    .nav-links a { width: 100%; padding: 0.65rem 0.5rem; font-size: 1rem; }
-    .nav-links .nav-cta { margin-top: 0.5rem; text-align: center; }
-
-    .hero-split {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        padding: 0 1.5rem;
-        transform: translateY(-50%);
+    .nav-links a { width: 100%; padding: 0.7rem 0.5rem; font-size: 0.975rem; border-bottom: 1px solid var(--border); }
+    .nav-links li:last-child a { border-bottom: none; }
+    .nav-links .nav-cta {
+        margin-top: 0.5rem;
+        text-align: center;
+        border: none;
+        border-radius: var(--radius);
+        padding: 0.7rem 1rem;
     }
-    .hero-desc { max-width: 100%; }
-    .hero-video-wrap { max-width: 400px; margin: 0 auto; }
 
-    .hero { height: 100vh; min-height: 600px; }
+    /* ── Hero ── */
+    .hero {
+        height: 100vh;
+        height: 100svh;
+        min-height: 520px;
+    }
+    .hero-overlay {
+        background: linear-gradient(to bottom,
+            rgba(6,6,6,0.50) 0%,
+            rgba(6,6,6,0.72) 30%,
+            rgba(6,6,6,0.72) 65%,
+            rgba(6,6,6,0.55) 100%);
+    }
+    .hero-content {
+        padding: 0 1.5rem;
+        max-width: 100%;
+        top: 44%;
+    }
+    .hero-eyebrow {
+        font-size: 0.72rem;
+        letter-spacing: 0.07em;
+        margin-bottom: 0.75rem;
+    }
+    .hero-headline {
+        font-size: clamp(2.2rem, 9vw, 3.2rem);
+        margin-bottom: 1.5rem;
+    }
+    .hero-nav { display: none; }
+    .hero-dots { bottom: calc(68px + 1.25rem); }
 
-    .stats-row { gap: 0; }
-    .stat { padding: 0.5rem 1.5rem; }
-    .stat-sep { height: 30px; }
+    /* ── Stats strip ── */
+    .stats-row { gap: 0; flex-wrap: nowrap; }
+    .stat { padding: 0.5rem 0; flex: 1; }
+    .stat strong { font-size: 1.5rem; }
+    .stat span { font-size: 0.68rem; letter-spacing: 0.04em; }
+    .stat-sep { height: 28px; }
 
-    .section { padding: 4rem 0; }
-    .section-header { margin-bottom: 2.5rem; }
+    /* ── Sections ── */
+    .section { padding: 3.5rem 0; }
+    .section-header { margin-bottom: 2rem; }
+    .section-header h2 { font-size: clamp(1.9rem, 7vw, 2.6rem); }
 
+    /* ── About ── */
     .about-pillars { grid-template-columns: 1fr; }
     .mv-row { grid-template-columns: 1fr; }
+    .about-store-photo { min-height: 220px; }
 
+    /* ── Departments ── */
     .departments-grid { grid-template-columns: 1fr; }
-    .dept-card:nth-child(4) { grid-column: 1; }
+    .dept-img { height: 200px; }
 
-    .gallery-row,
-    .gallery-row.reverse { grid-template-columns: 1fr; direction: ltr; gap: 1.5rem; }
+    /* ── Bakery feature ── */
+    .bakery-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .bakery-photo { position: static; }
+    .bakery-photo img { aspect-ratio: 16/9; }
 
+    /* ── Shawarma feature ── */
+    .shawarma-feature { padding: 3.5rem 0; }
+    .shawarma-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .shawarma-logo-display { order: -1; min-height: 180px; padding: 1.75rem 1.5rem; }
+    .shawarma-logo-display img { max-width: 220px; }
+
+    /* ── Why Us ── */
     .why-grid { grid-template-columns: 1fr; }
+
+    /* ── Gallery ── */
+    .gallery-grid-3 { grid-template-columns: repeat(2, 1fr); }
+    .gallery-hero-img img { max-height: 240px; }
+
+    /* ── Blog / Articles ── */
+    .blog-grid { grid-template-columns: 1fr; }
+    .article-inner { padding: 1.5rem 1rem 2rem; }
+
+    /* ── Contact ── */
     .contact-grid { grid-template-columns: 1fr; }
     .contact-map { min-height: 260px; }
 
+    /* ── Footer ── */
     .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
     .footer-bottom { flex-direction: column; text-align: center; }
+
+    /* ── Floating group button ── */
+    .whatsapp-group-float {
+        bottom: 5.25rem;
+        left: 1rem;
+        height: 46px;
+        width: 46px;
+        padding: 0;
+        justify-content: center;
+        border-radius: 50%;
+    }
+    .whatsapp-group-float .wg-label { display: none; }
+
+    /* ── Mobile sticky bar ── */
+    .mobile-sticky-bar { display: flex; }
 }
 
 @media (max-width: 480px) {
-    .container { padding: 0 1.25rem; }
-    .hero-actions { flex-direction: column; align-items: flex-start; }
-    .hero-actions .btn { width: 100%; text-align: center; }
-    .stats-strip .stats-row { flex-direction: column; gap: 1rem; }
+    .hero-actions { flex-direction: column; align-items: stretch; }
+    .hero-actions .btn { text-align: center; }
+    .stats-strip .stats-row { flex-wrap: wrap; justify-content: center; gap: 0; }
+    .stat { flex: 0 0 50%; padding: 0.75rem 0; }
     .stat-sep { display: none; }
     .gallery-grid-3 { grid-template-columns: 1fr; }
+    .shawarma-logo-display img { max-width: 180px; }
 }
